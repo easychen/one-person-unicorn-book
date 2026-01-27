@@ -1,0 +1,68 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install mdbook
+        uses: peaceiris/actions-mdbook@v2
+        with:
+          mdbook-version: 'latest'
+
+      - name: Build Books
+        run: |
+          # Create public directory
+          mkdir -p public
+          
+          # Build Chinese version -> temp
+          cd cn
+          mdbook build -d ../public/zh_build
+          
+          # Handle Chinese build output (check for multi-backend structure)
+          if [ -d "../public/zh_build/html" ]; then
+            mv ../public/zh_build/html ../public/zh
+            if [ -d "../public/zh_build/epub" ]; then
+              mkdir -p ../public/zh/epub
+              mv ../public/zh_build/epub/* ../public/zh/epub/
+            fi
+          else
+            mv ../public/zh_build ../public/zh
+          fi
+          rm -rf ../public/zh_build
+          
+          # Build English version -> temp
+          cd ../en
+          mdbook build -d ../public/en_build
+          
+          # Handle English build output
+          if [ -d "../public/en_build/html" ]; then
+            mv ../public/en_build/html ../public/en
+            if [ -d "../public/en_build/epub" ]; then
+              mkdir -p ../public/en/epub
+              mv ../public/en_build/epub/* ../public/en/epub/
+            fi
+          else
+            mv ../public/en_build ../public/en
+          fi
+          rm -rf ../public/en_build
+          
+      - name: Copy Index
+        run: |
+          # Copy index page to root
+          cp index.html public/index.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

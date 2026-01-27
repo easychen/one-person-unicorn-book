@@ -1,0 +1,11 @@
+[book]
+title = "一人独角兽"
+authors = ["Easy"]
+language = "zh-cn"
+
+[output.html]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+
+[output.epub]
+cover-image = "src/image/cover.jpg"

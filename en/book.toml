@@ -1,0 +1,11 @@
+[book]
+title = "The One-Person Unicorn"
+authors = ["Easy"]
+language = "en"
+
+[output.html]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+
+#[output.epub]
+#cover-image = "src/image/cover.jpg"
