@@ -7,5 +7,6 @@ language = "zh-cn"
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
 
-[output.epub]
-cover-image = "src/image/cover.jpg"
+#[output.epub]
+#cover-image = "src/image/cover.jpg"
+#optional = true

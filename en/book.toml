@@ -9,3 +9,4 @@ preferred-dark-theme = "ayu"
 
 #[output.epub]
 #cover-image = "src/image/cover.jpg"
+#optional = true
