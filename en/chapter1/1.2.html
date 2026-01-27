@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>1.2 Role Metamorphosis and Bottleneck Shift - The One-Person Unicorn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-cd2152b1.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-47021aa7.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The One-Person Unicorn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="12-role-metamorphosis-and-bottleneck-shift"><a class="header" href="#12-role-metamorphosis-and-bottleneck-shift">1.2 Role Metamorphosis and Bottleneck Shift</a></h2>
+<p><img src="../image/sob2.jpeg" alt=""></p>
+<p>Cheng Yuan’s story is a fable that foretells the drastic shifts occurring in the commercial crust in a nearly brutal way. That AI-generated report is like a cold mirror, reflecting the fundamental cracks in the traditional knowledge industry: when top human intelligence can be replicated by algorithms at near-zero marginal cost and with thousands of times the efficiency, human value coordinates must be thoroughly reassessed.</p>
+<p>This is no longer an optimization problem of “how to make the carriage run faster,” but a reality of realizing “the starship has been invented.” The old map is invalid; sailing along it will only lead to the iceberg of elimination. This paradigm revolution driven by AI is relentlessly pushing fundamental shifts on two levels: first, the metamorphosis of human roles, from chess pieces to chess players; second, the migration of commercial bottlenecks, from time to attention.</p>
+<h3 id="from-worker-to-architect-the-up-dimensioning-of-value"><a class="header" href="#from-worker-to-architect-the-up-dimensioning-of-value">From Worker to Architect: The Up-dimensioning of Value</a></h3>
+<p>For over a century in the industrial and information ages, the core value of knowledge workers lay in “execution.” Our education system, organizational structures, and career paths have all revolved around one goal: cultivating more professional and efficient “Workers.” An excellent lawyer meant handling case files faster; an outstanding programmer meant completing code with fewer bugs; a top analyst meant building models more precisely. Human value was deeply bound to the quality and speed of tasks they completed “hands-on.” Organizational development relied on hiring more such executors, achieving scale expansion through linear “labor leverage.”</p>
+<p>However, the emergence of AI has thoroughly commoditized the value dimension of “execution.” In highly structured knowledge work fields, AI is not only a faster executor but also a more tireless, comprehensive, and less biased one. It can read, analyze, code, and create 24/7 without complaint, mistakes, or emotional fluctuations. This means that knowledge workers who define their value by relying on “execution” are seeing their commercial value being infinitely diluted.</p>
+<p>But this is not the end, but a forced “up-dimensioning.” When machines take over almost all the “How,” the only territory left for humans, where value is infinitely amplified, is “What” and “Why.” Our roles must metamorphose from specific <strong>Workers</strong> deeply mired in processes to two brand-new roles at a higher dimension:</p>
+<ol>
+<li>
+<p><strong>System Architect</strong>: Architects no longer care how each brick is laid; they care about the design blueprint of the entire cathedral. In AI-native enterprises, the architect’s core responsibility is to define the “objective function” and “operating rules” of the business system. They translate business insights, strategic intentions, and values into instructions, SOPs (Standard Operating Procedures), and “Constitutions” that AI can understand and execute. They design not products, but the “machines” that produce products—a value creation system composed of countless AI agents capable of autonomous operation. They are the ones setting the course for the starship.</p>
+</li>
+<li>
+<p><strong>Result Auditor</strong>: Auditors are the gatekeepers of final product quality and business results. When AI teams can generate massive amounts of content, code, or strategies at astonishing speeds, “creation” itself becomes cheap, while “judgment” and “taste” become extremely expensive. The auditor’s responsibility is to select the “unique solution” that best fits the vision and touches people’s hearts from the myriad outputs of AI, relying on their profound industry knowledge, unique aesthetics, and insight into human nature. They are the ones who, among a thousand options produced by AI, point out “this is the right one” based on intuition and experience.</p>
+</li>
+</ol>
+<p>This role transformation liberates human capabilities from the curse of “linear growth,” endowing them with the power of “exponential leverage.” An executor spends one hour to produce one hour of value. An architect spends one hour designing an optimized system, and this system may create value in every subsequent minute that would have required a hundred human executors to complete in the past. This is a leap from addition to multiplication, and then to exponentiation. Humans are no longer the hardest-working cogs in the system, but the engines that define how the cogs turn and ultimately decide where the system goes.</p>
+<h3 id="attention-is-the-new-oil-the-ultimate-scarcity"><a class="header" href="#attention-is-the-new-oil-the-ultimate-scarcity">Attention is the New Oil: The Ultimate Scarcity</a></h3>
+<p>Behind this role metamorphosis lies a deeper shift in economic principles. In the past, the scarcest resource in the business world was “time.” Whether personal growth or corporate operations, it was essentially a race about how to most efficiently use limited time. We exchanged time for money and used money to buy others’ time.</p>
+<p>But when AI became the infrastructure of enterprises, time, once the hard currency, suddenly “inflated.” An AI employee has infinite time; it can be instantly replicated into ten thousand AI employees, who collectively possess an infinite, 24/7 uninterrupted working time. When “labor time” becomes inexhaustible, it is no longer the bottleneck.</p>
+<p>So, what is the new bottleneck?</p>
+<p>It is <strong>human attention</strong>.</p>
+<p>This is the migration of the bottleneck. When time is no longer scarce, the only, absolute resource that cannot be replicated or outsourced remains the cognitive bandwidth that the human brain can focus on in a single moment. For the “one-person unicorn” trying to command an AI legion, the attention he or she possesses is the “Central Processing Unit” (CPU) of the entire commercial empire operation. The performance of this processor directly determines the scale, speed, and height of the entire empire.</p>
+<p>However, the performance of this “CPU” is extremely limited and highly prone to wear and tear. When we try to manage and guide multiple parallel AI agents simultaneously, a huge, invisible cost arises, which we can call <strong>“The Context Switching Tax.”</strong></p>
+<p>Let us use a more dramatic scene to feel the weight of this “tax.”</p>
+<p>Imagine a Michelin three-star chef preparing a dish that will determine the restaurant’s reputation. He enters a “flow” state; every movement is like artistic creation. He is carefully placing a precious borage leaf with morning dew on top of the dish with tweezers—this is the finishing touch. Just then, the kitchen door is flung open.</p>
+<p>“Chef!” the waiter shouts anxiously, “The guest at table 3 is allergic to nuts; the menu needs immediate adjustment!” (An urgent customer service task requiring professional judgment)</p>
+<p>The chef frowns and quickly offers an alternative. He turns around, trying to return to the world just now, but the purchaser blocks him again.</p>
+<p>“Chef!” the purchaser hands over a report, “Next quarter’s budget needs your confirmation now, especially that batch of expensive blue lobsters; we must decide immediately.” (A high-risk financial task requiring data analysis and business decision-making)</p>
+<p>He finishes handling the budget, takes a deep breath, and tries to pull his attention back to the dish. But out of the corner of his eye, he glimpses an apprentice handling a piece of top-quality tuna belly with the wrong knife technique, and he has to step forward immediately to correct it. (A training task requiring experience transfer and quality control)</p>
+<p>When he finally gets rid of everything and returns to the workstation, he finds that the precious borage leaf has slightly withered because it missed the best timing. More importantly, he has completely lost the perfect intuition for heat, time, and beauty he had just now. In his brain, residues of customer allergy information, blue lobster quotes, and the apprentice’s wrong movements remain. He was vividly switched from an artist into a collection of customer service, purchasing manager, and training supervisor. Every switch made him pay a high “Context Switching Tax”; and those lingering distracting thoughts polluted his most precious “attention” like oil stains. In the end, a dish that could have been a “masterpiece” was reduced to a merely “qualified” product.</p>
+<p>This is the true portrayal of an architect trying to manage too many parallel tasks. You think you are a commander devising strategies, but in reality, you are just a firefighter exhausted from running between different fire scenes. You become a “router” for information transmission, rather than a “thinker” producing profound insights.</p>
+<p>For this phenomenon, Sophie Leroy, a professor of business management at the University of Washington, proposed a more precise and profound definition—<strong>“Attention Residue”</strong><sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup>.</p>
+<p>Leroy’s research found that when we switch from Task A to Task B, our cognitive resources do not transfer over instantly and completely. Instead, a part of attention remains on the previous Task A like “residue”<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>. You may have started reading the file for Task B, but deep in your brain, you are still ruminating on a detail of Task A, or worrying about an unresolved issue in Task A.</p>
+<p>The direct consequence of this “Attention Residue” is a significant decline in your cognitive performance on the current Task B. You read slower, understand more superficially, and find it harder to enter the deep work state known as “flow”<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup>. You think you are “multitasking,” but in fact, you are polluting every job you touch in a fragmented, inefficient way. The residual thoughts occupy your precious “cognitive RAM,” making you unable to go all out to deal with the problem at hand<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</p>
+<p>This theory draws a clear boundary supported by cognitive science for the dream of the “one-person unicorn.” It eloquently proves that the upper limit of a human commander’s capability does not depend on how many AIs he can mobilize, but on how low he can keep his “Attention Residue.” Trying to command a thousand AI Agents simultaneously with brute force will only make you quickly crushed by the “Context Switching Tax,” eventually drowning in the ocean of information.</p>
+<p>It is precisely this seemingly insurmountable cognitive limit that makes our research and construction of AI-native enterprises meaningful. It transforms our goal from blindly piling up the number of AI agents with brute force into a science—a science about how to carefully design and architect an efficient autonomous system around human limited attention. This is the core value of the methodology this book intends to elaborate: what we need is not a larger AI legion, but an organizational form scientifically built that understands human cognitive limitations better.</p>
+<p>Therefore, the core organizational principle of AI-native enterprises is not to pursue the maximization of AI quantity management, but to pursue the minimization of human attention consumption. Successful architects will defend their attention madly like a miser. They will design AI workflows capable of autonomous operation without frequent intervention; they will establish powerful evaluation and filtering systems (Evals) to let AI self-check and self-correct; they will batch process similar decisions to avoid repeatedly jumping between different cognitive tracks.</p>
+<p>They know deeply that in this brand-new race, time is cheap computing power, while attention is the truly precious energy driving everything. It is the “new oil” on which the one-person corporate empire relies for establishment and expansion. How to explore, extract, refine, and use this precious energy will be the ultimate proposition determining the success or failure of future business leaders.</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>Sophie Leroy’s “Attention Residue” theory is the core to understanding the cost of task switching. Reference her research paper, “Why is it so Hard to do My Work? The Challenge of Attention Residue When Switching Between Work Tasks”. <a href="https://www.researchgate.net/publication/46489122_Why_is_it_so_Hard_to_do_My_Work_The_Challenge_of_Attention_Residue_when_Switching_Between_Work_Tasks">Paper Link</a> <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>Supplementary material for this theory, further explaining the impact of attention residue on work difficulty. Reference Scribd document, “Why Is It So Hard To Do My Work”. <a href="https://www.scribd.com/document/856551539/c-Coek-Info-Why-is-It-So-Hard-to-Do-My-Work-the-Challenge-of-a-1">Document Link</a> <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>In-depth research on the attention residue phenomenon, exploring the role of factors such as time pressure. Reference paper, “Tasks Interrupted: How Anticipating Time Pressure… Causes Attention Residue”. <a href="https://www.semanticscholar.org/paper/Tasks-Interrupted%3A-How-Anticipating-Time-Pressure-a-Leroy-Glomb/eeeab9fec8439ae2821ba127ef5d398b4f7f5d4a">Paper Link</a> <a href="#fr-3-1">↩</a></p>
+</li>
+<li id="footnote-4">
+<p>This study explores how “regulatory focus” as a psychological mechanism affects attention residue. Reference its publication archive at the University of Minnesota, “The effect of regulatory focus on attention residue and performance during interruptions”. <a href="https://experts.umn.edu/en/publications/the-effect-of-regulatory-focus-on-attention-residue-and-performan/">Academic Archive Link</a> <a href="#fr-4-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter1/1.1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter1/1.3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter1/1.1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter1/1.3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

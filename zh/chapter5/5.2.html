@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>5.2 应用矩阵策略 - 一人独角兽</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-c7b94894.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-23faecf1.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">一人独角兽</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="52-应用矩阵策略-application-matrix-strategy"><a class="header" href="#52-应用矩阵策略-application-matrix-strategy">5.2 应用矩阵策略 (Application Matrix Strategy)</a></h2>
+<p><img src="../image/sob14.jpeg" alt=""></p>
+<p>在上一节中，我们建立了“资产池”理论，将一人企业重新想象为一个由硬资产、软资产和认知资产构成的中央宝库。这解决了企业“有什么”的问题。然而，一个更具决定性的问题随之而来：我们应该如何使用这些资产？是像传统的创业者那样，将所有资源押注于一个“天选之子”般的项目，还是有更高明的策略？</p>
+<p>传统创业的模式，本质上是一种“孤注一掷”的豪赌。创始团队将全部心血、时间与资本倾注于单一产品，然后祈祷市场能够验证他们的判断。这种模式的脆弱性显而易见：一旦市场风向转变、技术路径被证伪，或者一个更强大的竞争对手出现，整个公司便面临灭顶之灾。它就像一艘结构精密但没有备用引擎的飞船，任何一次意外都可能是致命的。</p>
+<p>AI 原生企业则提供了一种截然不同的范式。既然 AI 将创造的边际成本降至近乎为零，我们便不再需要将所有鸡蛋放在同一个篮子里。这就是“应用矩阵策略”的核心思想：将创业从单一的、高风险的“项目制”思维，转变为一种动态的、风险对冲的“投资组合”思维。一人企业不再是一个产品，而是一个源源不断产生应用的“应用工厂”（Application Factory）。我们追求的不是单次战役的胜利，而是整个战争的胜利。</p>
+<p>这种策略的转变，要求创始人完成一次深刻的身份切换——从一个虔诚的产品信徒，蜕变为一个理性的风险投资家。</p>
+<h3 id="从孤注一掷到投资组合一人企业的生存之道"><a class="header" href="#从孤注一掷到投资组合一人企业的生存之道">从孤注一掷到投资组合：一人企业的生存之道</a></h3>
+<p>风险投资（VC）行业的核心逻辑，是通过广泛投资来对抗未来的高度不确定性。一个典型的 VC 基金会投资数十家甚至上百家初创公司，他们深知其中大部分会失败，但只要有一两家公司成为“本垒打”项目（Home Run），其回报就足以覆盖所有损失。</p>
+<p>在 AI 时代，创始人有机会将这种“投资人思维”内化为自己的核心经营哲学。你的企业不再是 VC 投资组合中的“一家公司”，而是你个人运营的“一支基金”。但这立刻引出了一个尖锐的矛盾：我们在第一章中明确指出，<strong>注意力是“一人企业”最珍贵的、不可再生的资源</strong>。同时运营多个应用，难道不是对“认知切换税”和“注意力残留”理论的公然违背吗？</p>
+<p>这便是传统“应用矩阵”与“一人企业”现实之间的核心冲突。大型机构（如后文将提到的Genesis）可以凭借庞大的团队和资本实现真正的“并行矩阵”，但对于一人企业，这无异于自杀。答案在于对矩阵策略的修正与重构，我们称之为 <strong>“滚动式矩阵（Rolling Matrix）”</strong>，或更形象的 <strong>“滚雪球策略”</strong>。</p>
+<p>“滚雪球策略”的核心，是 <strong>“串行执行，矩阵规划”</strong>。你的注意力在任何单一时间点上，都应该高度聚焦于一个核心项目。但你的战略规划，则始终保持着一个多元化的、包含多个潜在项目的“应用矩阵”视野。</p>
+<p>其运作方式如下：</p>
+<ol>
+<li><strong>聚焦期 (Focus)</strong>：你将 90% 的精力投入到应用 A 上，目标是将其打磨至“产品-市场契合”（Product-Market Fit）或实现稳定的正向现金流。在这个过程中，你不仅在开发一个产品，更是在有意识地构建和沉淀你的“资产池”——可复用的代码模块、用户基础、品牌声誉和认知资产。</li>
+<li><strong>继承与启动 (Inherit &amp; Launch)</strong>：当应用 A 稳定后（或被验证失败后），你启动应用 B。关键在于，<strong>应用 B 并非从零开始，它“继承”了应用 A 的遗产</strong>。它复用了你的支付渠道、用户账户体系、以及最重要的——从应用 A 的成败中习得的“认知资产”。固定成本被摊薄，边际成本递减。</li>
+<li><strong>滚动与扩张 (Roll &amp; Expand)</strong>：你将主要精力转移到应用 B，而应用 A 则进入低强度的维护模式。成功之后，你继续启动应用 C，它将同时继承 A 和 B 的资产。你的事业就像一个越滚越大的雪球，每一次滚动，都带着过去积累的全部能量。</li>
+</ol>
+<p>这才是超级个体真正的玩法。正如我们稍后会详细分析的，Tony Dinh 并非同时开发 Typing Mind 和 Black Magic，而是先做稳一个，再做下一个。这套策略的精髓，可以用一句话来概括：</p>
+<blockquote>
+<p><strong>不要用并发的多任务处理（Multitasking）来挑战你的大脑，要用资产的复用来挑战商业的效率。做第一个应用时，你是在造轮子；做第二个应用时，你是在组装赛车。</strong></p>
+</blockquote>
+<p>理解了“滚雪球”模型，我们再来看“低成本试错”的威力。在“矩阵规划”的视野下，你可以同时构思十个切口极小的“手术刀”式微型应用，去探测市场的真实需求：</p>
+<ul>
+<li><strong>应用A</strong>：一个专门将学术论文（PDF）转化为社交媒体推文风格摘要的 Agent。</li>
+<li><strong>应用B</strong>：一个针对独立开发者，自动生成 App Store 更新日志和宣传文案的 Agent。</li>
+<li>… 以此类推，直至应用 J。</li>
+</ul>
+<p>你可以在极短的时间内（例如一个周末），用最简陋的方式（或许只是一个登陆页或一个简单的脚本）构建出这些想法的“探针”（Probe），验证市场的初始兴趣。然后，基于真实的数据反馈，你选择其中最富潜力的一个，作为你下一个“滚雪球”的起点，将你的全部注意力聚焦于此。这才是对“应用矩阵”和“注意力经济”的统一与升华。</p>
+<p><strong>案例研究：从超级个体到应用帝国</strong></p>
+<p>“应用矩阵策略”并非纸上谈兵的理论，在现实世界中，它早已成为许多顶尖开发者和组织大规模实践并取得惊人成功的“公开的秘密”。从单枪匹马的“超级个体”，到体系化运作的“应用帝国”，这种策略展现了惊人的可扩展性。以下两个案例，分别代表了该策略在“个体”和“组织”两个层面的极致体现。</p>
+<p><em><strong>第一层：超级个体 —— Tony Dinh 的“一人军团”</strong></em></p>
+<p>作为独立开发者（Indie Hacker）社群中最杰出的代表之一，越南开发者 Tony Dinh 以一己之力，构建了一个由多个应用组成的产品矩阵，实现了个人商业上的巨大成功，是“一人独角兽”理念最接近现实的雏形。</p>
+<p>Tony Dinh 的哲学正是“滚动式矩阵”的绝佳实践。他表面上维护着一个产品矩阵，但其核心精力的投入，在不同阶段是高度聚焦的。他通过串行征服、并行维护的方式，构建起一个互相支撑、分散风险的投资组合。截至 2025 年底，他的产品矩阵每月能为他带来超过 14 万美元的总收入 <sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup>。让我们来剖析他矩阵中的几个关键产品：</p>
+<ol>
+<li>
+<p><strong>本垒打项目 (Home Run): Typing Mind</strong>
+这是 Tony Dinh 在 AI 浪潮中抓住的巨大机遇。作为一个为 ChatGPT/Claude 等大模型提供更优交互界面的 AI 产品，Typing Mind 取得了爆炸性的成功。它在上线第一年就创造了 50 万美元的收入，到了 2025 年底，其月度经常性收入（MRR）已飙升至惊人的 13.7 万美元 <sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup> <sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>。Typing Mind 是他矩阵中的“现金牛”和“增长引擎”。</p>
+</li>
+<li>
+<p><strong>稳健的现金流: DevUtils &amp; Xnapper</strong>
+在 Typing Mind 爆发之前，Tony 已经拥有了两个稳定创收的应用。<code>DevUtils</code> 是他第一个盈利的产品，为开发者提供一系列常用的小工具，每月能稳定贡献约 5500 美元。<code>Xnapper</code> 则是一个功能强大的截图美化工具，月收入也维持在 4000-6000 美元。这两个应用的存在，意味着即使没有 Typing Mind，他也能拥有一个健康的财务基础，这让他有足够的底气和自由去探索新的、高风险高回报的机会 <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup>。</p>
+</li>
+<li>
+<p><strong>动态调整与退出: Black Magic</strong>
+<code>Black Magic</code> 是一个增强 Twitter 体验的工具，曾一度达到 1.4 万美元的月收入。然而，当 Twitter（后来的 X）的 API 政策发生剧烈变化，严重影响了产品的核心功能时，Tony 并没有固执地坚持。他清醒地判断了外部环境的风险，果断地以 12.8 万美元的价格将其出售。这完美地诠释了应用矩阵的风险对冲能力：一个项目的失败或外部风险，并不会摧毁整个事业 <sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>。</p>
+</li>
+</ol>
+<p>Tony Dinh 的成功，揭示了“应用矩阵策略”在个体层面是如何运作的：通过<strong>并行探索</strong>捕捉机会，通过<strong>风险对冲</strong>保证生存，通过<strong>资源复用</strong>（个人品牌、技术栈）提高效率。</p>
+<p><em><strong>第二层：应用帝国 —— Genesis 的“幕后工厂”</strong></em></p>
+<p>如果说 Tony Dinh 的成功展示了“应用矩阵”如何赋能超级个体，那么来自乌克兰的 Genesis Technology Partners 则向我们揭示了，当这种模式被机构化、体系化之后，将爆发出何等惊人的能量。Genesis 是一家“Venture Builder”（风险构建工作室），他们不直接投资，而是与创业者共同创办企业，提供从技术、市场到分析的全方位支持，换取公司股份。他们是移动应用行业真正的“隐形大佬”。</p>
+<p>Genesis 旗下拥有一个庞大的应用帝国，其中不乏全球范围内的知名应用。根据商业数据平台 <code>Growjo</code> 和 <code>Gameworldobserver</code> 的估算，其部分核心产品的月收入数据极为惊人：</p>
+<ul>
+<li><strong>BetterMe</strong>: 一款健康与健身应用，年收入增长至 8000 万美元，平均每月营业额高达 500 万美元 <sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">5</a></sup>。</li>
+<li><strong>PlantIn</strong>: 一款植物护理应用，全球月收入约为 90 万美元 <sup class="footnote-reference" id="fr-6-1"><a href="#footnote-6">6</a></sup>。</li>
+<li><strong>Headway</strong>: 一款书籍摘要应用，预估年收入高达 4.9 亿美元 <sup class="footnote-reference" id="fr-7-1"><a href="#footnote-7">7</a></sup>。</li>
+</ul>
+<p>这些应用仅仅是 Genesis 帝国版图的一部分。他们通过“幕后运营”的模式，在全球范围内孵化了下载量超过 4 亿次的庞大应用组合。其核心模式正是制度化的“应用矩阵”：</p>
+<ol>
+<li><strong>中央平台支持</strong>：Genesis 拥有一个强大的中央平台，为所有孵化的初创公司提供技术、营销、用户获取和数据分析等核心能力。这与我们定义的“资产池”概念完全一致，极大地降低了新项目启动的成本和门槛。</li>
+<li><strong>多元化生态系统</strong>：他们的应用涵盖健康、教育、工具、媒体等多个领域，形成了一个极其多元化的投资组合。这使得他们能够抵御任何特定行业的波动，并能捕捉到不同领域涌现的新机会。</li>
+<li><strong>专家团队运作</strong>：与“一人军团”不同，Genesis 将每一个环节都变成了专业团队。他们拥有世界级的用户获取专家、数据分析师和产品经理，他们的经验和教训（即“认知资产”）在整个公司的所有产品间共享和复用，形成了强大的网络效应。</li>
+</ol>
+<p>从 Tony Dinh 的一人军团，到 Genesis 的应用帝国，我们看到了“应用矩阵策略”在不同尺度下的共同逻辑和强大威力。它摒弃了传统的、将所有希望寄托于单一想法的“英雄主义”叙事，转向一种更理性的、更具反脆弱性的“生态系统”思维。这正是 AI 时代，企业对抗不确定性、实现可持续增长的核心生存法则。</p>
+<h3 id="基础设施复用矩阵的协同效应"><a class="header" href="#基础设施复用矩阵的协同效应">基础设施复用：矩阵的协同效应</a></h3>
+<p>如果同时运营 10 个项目，意味着 10 倍的工作量、10 倍的复杂度和 10 倍的管理成本，那么“应用矩阵策略”将毫无价值，甚至会因为创始人注意力的极度分散而成为一场灾难。这个策略之所以不仅可行，而且高效，其根基在于一个看似简单但极其强大的原则：<strong>基础设施的极致复用</strong>。</p>
+<p>矩阵中的每一个应用，都不是一个孤立的岛屿。它们看似形态各异，服务于不同市场，但它们的“基因”都源于同一个中央“资产池”。正是这种共享和复用，创造了 <code>1+1 &gt; 10</code> 的协同效应，使得运营 10 个项目的成本远低于运营一个项目的 10 倍。我们可以从三个层面来理解这种流动的、协同的复用关系。</p>
+<h4 id="1-硬资产复用压倒性的规模化成本优势"><a class="header" href="#1-硬资产复用压倒性的规模化成本优势">1. 硬资产复用：压倒性的规模化成本优势</a></h4>
+<p>诚然，如前文所述，硬资产（支付渠道、API密钥、服务器等）天然具有可复用性。但这并非故事的全部。在“应用矩阵”的结构下，这种复用被升维成一种决定性的竞争优势：<strong>压倒性的规模化成本优势 (Overwhelming Economies of Scale)</strong>。</p>
+<p>这不仅仅是节约了购买几把“数字钥匙”的费用，而是构建了一道令独立竞争者难以逾越的经济护城河。试想，一个创业者要上线一款应用，需要投入大量时间与精力去搭建一套合规的支付系统、安全的数据库、以及稳定的用户账户体系。这是一笔巨大的、一次性的固定成本。而对于应用矩阵的拥有者而言，这套“数字管道”在第一个应用上线时就已经铺设完毕。</p>
+<p>这意味着：</p>
+<ul>
+<li><strong>固定成本的极致摊薄</strong>：当第二个应用被创建时，这笔固定成本瞬间被摊薄了50%。当第十个应用诞生时，分摊到每个应用上的基础设施成本仅为原来的分之一。</li>
+<li><strong>边际成本的急剧递减</strong>：启动第十一个应用的边际成本，几乎只剩下创意和几次API调用的费用。它无需再次经历繁琐的工程设置和法律合规流程，可以在数小时内就完成从构思到上线的全过程。</li>
+</ul>
+<p>这种成本结构，赋予了矩阵内每一个应用在定价、营销和容错率上巨大的灵活性。它不是简单的“省钱”，而是从根本上改变了竞争的规则。</p>
+<h4 id="2-软资产复用自我强化的增长飞轮"><a class="header" href="#2-软资产复用自我强化的增长飞轮">2. 软资产复用：自我强化的增长飞轮</a></h4>
+<p>如果说硬资产的复用是节省成本，那么软资产的复用则是创造增长。应用矩阵内的产品，可以形成一个强大的内部流量和品牌生态系统。</p>
+<ul>
+<li><strong>流量内循环</strong>：这是最强大的战术之一。当你的某个应用（例如，应用 A）通过内容营销或良好的口碑获得成功，积累了稳定的用户访问量时，它就成了一个宝贵的流量入口。你可以在应用 A 的界面上，以一种优雅而不突兀的方式，交叉推广你的其他应用。例如：“喜欢我们的文章摘要？试试我们的新工具‘视频亮点提取器’（应用 D）吧！” 这种内部导流的转化率，通常远高于外部广告，因为它基于用户对你现有产品的信任。一个成功的应用，可以像一台发动机一样，为整个矩阵源源不断地输送初始用户。</li>
+<li><strong>品牌伞效应</strong>：随着你发布的应用越来越多，你可以将它们统一到一个“品牌伞”下，例如“智行工作坊”（AI-Go Suite）或类似的名字。这会逐渐在用户心中建立一个“这个出品方=高质量AI工具”的品牌认知。当用户信任你的品牌后，他们会更愿意尝试你的新产品，甚至会主动关注你发布了什么新东西。这种品牌信任的复用，极大地缩短了新产品的冷启动周期。</li>
+<li><strong>社群与关系</strong>：你为所有应用建立一个统一的用户社群（例如 Discord 服务器或邮件列表）。这不仅方便你统一发布更新、收集反馈，更重要的是，它将不同应用的用户汇聚在一起，形成了一个网络。你可以在这个网络中敏锐地捕捉到新的需求，这些需求往往就是你下一个爆款应用的灵感来源。</li>
+</ul>
+<p>通过软资产的复用，你的应用矩阵不再是一堆散沙，而是一个相互连接、相互赋能的“有机体”。网络的价值随着节点的增加而指数级增长，你的应用矩阵同样如此。</p>
+<h4 id="3-认知资产复用会进化的集体智慧"><a class="header" href="#3-认知资产复用会进化的集体智慧">3. 认知资产复用：会进化的集体智慧</a></h4>
+<p>这是应用矩阵策略中最深刻、也最具革命性的一环。它让整个企业拥有了“集体记忆”和“集体智慧”，实现了真正意义上的“杀不死我的，必使我更强大”。</p>
+<p>它将整个市场变成了一个巨大的实验室，数十个“培养皿”（应用）同时进行着实验。任何一次成功或失败，其经验都会被瞬间提炼并注入中央“干细胞库”（认知资产池），反哺给所有“培养皿”。这种“并行进化”的速度，是单一产品“串行进化”模式无论如何也无法比拟的。</p>
+<p>我们再回到那个应用 B（AI 销售邮件机器人）因风格过于激进而失败的例子。在传统的公司里，这次失败的教训可能会以几种形式沉淀下来：项目经理写了一份无人问津的复盘报告；几个参与的员工在闲聊时会提起这次“事故”；或者，如果CEO记性好，下次开会时会口头提醒大家注意。这些“经验”是脆弱的、零散的，且极易随着人员的流失而消失。</p>
+<p>但在 AI 原生企业的应用矩阵中，这次失败将被转化为永恒的、可执行的<strong>认知资产</strong>。</p>
+<ol>
+<li><strong>检查 (Check)</strong>：当系统检测到应用 B 的用户留存率极低，或收到大量负面反馈时，Evals 模块（如 4.4 节所述）会自动触发一次深度分析。它可能会调用“硅基评审团”，让多个 LLM 来评审那些失败的邮件，最终得出一个结论：“邮件的‘意图’被用户感知为‘强迫’而非‘帮助’。”</li>
+<li><strong>处理 (Act)</strong>：这个结论不会停留在报告里。PDCA 进化引擎会将其“编译”成一条新的规则。这条规则可能是一条具体的“宪法条款”，被添加到中央“认知资产池”的 <code>constitutional_prompts.md</code> 文件中：“<strong>原则 #17：在任何与潜在客户的初次沟通中，禁止使用带有催促性和压迫性语气的词汇。应优先提供价值，将‘请求’包装为‘提议’。</strong>”</li>
+<li><strong>复用 (Reuse)</strong>：这条新宪法，会通过<code>分形进化</code>机制（如 4.5 节所述），立刻同步给矩阵中的<strong>所有</strong>相关 Agent。当下一次，应用 G（一个用于社交媒体互动的 Agent）在构建它的初始 Prompt 时，它会自动加载这条原则。更重要的是，当你准备启动一个全新的应用 K（例如，一个用于招聘场景，主动联系候选人的 Agent）时，它从诞生的第一天起，就“知道”了不能用咄咄逼逼的语气与人沟通。</li>
+</ol>
+<p>应用 B 的一次“死亡”，换来了整个矩阵的一次“免疫力升级”。这就是认知资产复用的威力。失败不再是成本，而是未来成功的投资。每一次用户的投诉、每一次 Agent 的幻觉、每一次转化率的暴跌，都被系统“吞噬”，消化为可被整个组织继承的智慧。</p>
+<p>资产池的价值，至此得到了终极的体现。它不仅存储了成功的代码和SOP，更关键的是，它还存储了**“试错的记忆”**（即PDCA循环中的Check结果）。应用A踩过的坑，应用B会自动避开。这才是认知资产复用的最高境界：一个能从经验中学习，并确保整个组织不再重复犯错的集体大脑。</p>
+<p>这张由硬资产、软资产和认知资产构成的复用网络，最终描绘出了一幅清晰的“应用矩阵”图景：</p>
+<ul>
+<li><strong>行 (Rows)</strong>：是你的核心资产池——统一的账户、共享的流量渠道、以及最重要的、不断进化的认知库。</li>
+<li><strong>列 (Columns)</strong>：是你在市场上部署的一个个应用探针。</li>
+</ul>
+<p>每一个应用，都是对这些共享资产的一次独特的调用与组合。而你的角色，就是那个站在控制台前的架构师，不断地观察数据，决定启动哪些新“列”，优化哪些“行”，从而指挥整个矩阵，以最低的成本、最快的速度，去占领未来的价值高地。</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>对 Tony Dinh 总收入的估算，来自其在社交媒体和独立开发者社区的公开分享。参考文章 “Tony Dinh’s Journey to $140k/Month with a Portfolio of Apps”, <em>Medium</em>, 2025年12月。在线阅读：<a href="https://medium.com/@anharde/how-a-solo-founder-is-making-45-000-month-from-a-portfolio-of-4-products-b5a52e15e1af">https://medium.com/@anharde/how-a-solo-founder-is-making-45-000-month-from-a-portfolio-of-4-products-b5a52e15e1af</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a></p>
+</li>
+<li id="footnote-2">
+<p>TypingMind 的营收数据由其创始人公开分享。参考 Tony Dinh, “TypingMind: A Year of Building a Million-Dollar AI App”, <em>tonydinh.com Blog</em>, 2024年11月。博客文章：<a href="https://tonydinh.com/typingmind/1-year-building-a-million-dollar-ai-app">https://tonydinh.com/typingmind/1-year-building-a-million-dollar-ai-app</a> <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>DevUtils 作为 Tony Dinh 的早期产品，为其提供了稳定的现金流。参考 “How a Solo Founder is Making $45,000/Month”, <em>Asia Tomorrow</em>, 2024年1月。文章链接：<a href="https://asiatomorrow.net/2024/01/10/how-a-solo-founder-is-making-45000-month-from-a-portfolio-of-4-products/">https://asiatomorrow.net/2024/01/10/how-a-solo-founder-is-making-45000-month-from-a-portfolio-of-4-products/</a> <a href="#fr-3-1">↩</a></p>
+</li>
+<li id="footnote-4">
+<p>关于 Black Magic 的出售细节，由 Tony Dinh 本人发布。参考 “I sold Black Magic, my Twitter side project”, <em>The Bootstrapped Founder</em>, 2023年6月。在线阅读：<a href="https://thebootstrappedfounder.com/i-sold-black-magic-my-twitter-side-project/">https://thebootstrappedfounder.com/i-sold-black-magic-my-twitter-side-project/</a> <a href="#fr-4-1">↩</a></p>
+</li>
+<li id="footnote-5">
+<p>BetterMe 的营收数据由商业分析平台 Growjo 估算。参考 “BetterMe Company Profile”, <em>Growjo</em>。公司档案：<a href="https://growjo.com/company/BetterMe">https://growjo.com/company/BetterMe</a> <a href="#fr-5-1">↩</a></p>
+</li>
+<li id="footnote-6">
+<p>PlantIn 的营收数据由商业分析平台 Gameworldobserver 引用。参考 “PlantIn Company Profile”, <em>Gameworldobserver</em>。公司档案：<a href="https://gameworldobserver.com/2022/11/04/plantin-publisher-genesis-seed-round-investment-google">https://gameworldobserver.com/2022/11/04/plantin-publisher-genesis-seed-round-investment-google</a> <a href="#fr-6-1">↩</a></p>
+</li>
+<li id="footnote-7">
+<p>Headway 的营收数据由商业分析平台 Growjo 估算。参考 “Headway Company Profile”, <em>Growjo</em>。公司档案：<a href="https://growjo.com/company/Headway">https://growjo.com/company/Headway</a> <a href="#fr-7-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter5/5.1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter5/5.3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter5/5.1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter5/5.3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

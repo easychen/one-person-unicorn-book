@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2.1 杠杆的迭代历史 - 一人独角兽</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-c7b94894.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-23faecf1.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">一人独角兽</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="21-杠杆的迭代历史"><a class="header" href="#21-杠杆的迭代历史">2.1 杠杆的迭代历史</a></h2>
+<h3 id="旧杠杆需要许可的枷锁-permissioned-leverage"><a class="header" href="#旧杠杆需要许可的枷锁-permissioned-leverage">旧杠杆——需要许可的枷锁 (Permissioned Leverage)</a></h3>
+<p>在人类商业史的大部分时间里，杠杆都带着一副沉重的镣铐，它的名字叫“许可”。你必须获得他人的同意，才能使用它。这构成了传统商业世界的基本游戏规则，也是其增长宿命的根源。</p>
+<h4 id="人力杠杆熵增的泥潭"><a class="header" href="#人力杠杆熵增的泥潭"><strong>人力杠杆：熵增的泥潭</strong></a></h4>
+<p>最古老、最直观的杠杆就是人力。你想开一家更大的店，就需要更多店员；你想建一座更宏伟的建筑，就需要更多工匠。你想管理一家跨国公司，就需要成千上万的员工。从表面上看，这是最直接的规模化路径：投入 = 产出 × 人数。</p>
+<p>然而，正如程远们所深切体会的，这是一种致命的错觉。人力杠杆的增长曲线并非线性，而是伴随着“管理熵”的急剧增加。每增加一个员工，增加的不仅仅是一份生产力，而是 N(N-1)/2 条新增的沟通链路。当团队从 10 人增长到 100 人，沟通的复杂度不是增加了 10 倍，而是指数级地暴增。这个现象早在几十年前就被软件工程界的传奇人物弗雷德里克·布鲁克斯（Frederick Brooks）所揭示，并以他的名字命名为“布鲁克斯法则”——向一个已经延期的项目增加人力，只会让它更晚完成<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">1</a></sup>。协调、对齐、汇报、审批……这些内部交易成本开始像藤壶一样附着在组织的龙骨上，让原本敏捷的船体变得臃肿而迟缓。</p>
+<p>这种规模的瓶颈不仅存在于项目沟通中，更根植于人类大脑的社交认知极限。英国人类学家罗宾·邓巴（Robin Dunbar）提出，一个人能够维持稳定社交关系的人数上限大约在 150 人，这便是著名的“邓巴数”<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">2</a></sup>。一旦组织规模超过这个阈值，依靠人际信任和默契的非正式协作机制便会失效，取而代之的是僵化的层级和繁琐的官僚制度。这正是为什么许多创业公司在突破 150 人规模时，会经历一次痛苦的“成人礼”，创始团队会感觉公司变得陌生而低效。</p>
+<p>这就是“需许可”的第一个诅咒：你必须获得他人的“许可”。你需要通过冗长的面试流程，说服一个优秀的人才加入你的愿景；你需要设计复杂的薪酬和晋升体系，来获得他们持续贡献的“许可”；你甚至需要处理办公室政治和人际关系，来获得高效协作的“许可”。你手中的杠杆，看似是别人的时间和技能，实则每一分每一秒都附带着高昂的“许可费用”。程远和他那数百人的咨询团队，正是这个模型的顶峰，也恰恰是这个模型的囚徒——他们被自己所撬动的杠杆本身压得喘不过气。</p>
+<h4 id="资本杠杆镀金的牢笼"><a class="header" href="#资本杠杆镀金的牢笼"><strong>资本杠杆：镀金的牢笼</strong></a></h4>
+<p>当工业革命的齿轮开始转动，第二种强大的“需许可杠杆”应运而生：资本。如果你想建造铁路、开设工厂，或者在互联网时代烧钱换取用户，你就需要资本。资本杠杆的力量是毋庸置疑的，它能将时间极度压缩，让一个想法在短时间内迅速膨胀为巨大的商业实体。</p>
+<p>但是，资本同样需要“许可”。你需要向银行、风险投资家（VC）或公开市场请求许可。这意味着你需要精心包装的商业计划书、激动人心的路演、以及对未来增长的夸张承诺。一旦你获得了许可，这笔杠杆就带来了新的枷锁。你出让的不仅是股权，更是控制权。你的决策将受到董事会的掣肘，你的战略必须屈从于基金的退出周期。你不再是为愿景负责，而是为季度财报负责。</p>
+<p>这在经济学上创造了经典的“代理问题”（Agency Problem）：作为创始人（代理人），你的目标是构建一个基业长青的伟大公司，而你的投资者（委托人）的首要目标则是在 5-10 年的基金周期内实现高倍数回报。这种目标上的不一致，催生了无处不在的“短期主义”（Short-termism）<sup class="footnote-reference" id="fr-6-1"><a href="#footnote-6">3</a></sup>。你被迫追求那些能在短期内提升估值的“虚荣指标”，而不是投资于那些真正能构建长期护城河的艰难决策。</p>
+<p>因此，资本杠杆就像一个镀金的牢笼。它为你提供了翱翔天际的燃料，却也限定了你的飞行航线和最终目的地。在 Web 2.0 时代，无数创业者追逐着资本的青睐，将“融资”本身视为成功的标志。然而，他们获得的杠杆，其使用说明书早已由外部的“许可方”写好。这是一种浮士德式的交易，你用自由换取了增长的速度。</p>
+<p>人力与资本，这两种旧杠杆共同塑造了我们熟悉的商业世界。它们强大、有效，但本质上都受制于人。它们的规模化，总是伴随着复杂度的失控和自主权的丧失。直到互联网的出现，一种全新的、摆脱了“许可”束缚的杠杆才初现曙光。</p>
+<h3 id="新杠杆无需许可的解放-permissionless-leverage"><a class="header" href="#新杠杆无需许可的解放-permissionless-leverage">新杠杆——无需许可的解放 (Permissionless Leverage)</a></h3>
+<p>硅谷思想家纳瓦尔·拉维坎特（Naval Ravikant）敏锐地捕捉到了这个历史性的转变，他提出了一个简洁而深刻的框架，将新时代的杠杆命名为“无需许可杠杆”<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">4</a></sup>。这两种杠杆的核心特征在于，它们的创造和分发几乎不需要任何人的批准，且其复制的边际成本趋近于零。它们就是<strong>代码</strong>和<strong>媒体</strong>。</p>
+<blockquote>
+<p>“在人类历史上，新财富的创造，新富豪的涌现，都源于新型杠杆的诞生。” — Naval Ravikant</p>
+</blockquote>
+<h4 id="代码一次构建无限服务"><a class="header" href="#代码一次构建无限服务"><strong>代码：一次构建，无限服务</strong></a></h4>
+<p>代码是第一种真正意义上的“无需许可杠杆”。一个程序员，只需要一台电脑，就可以创造出一个软件、一个网站或一个应用程序。他不需要向任何人申请牌照，也不需要获得投资人的点头。一旦这个软件被创造出来，它就可以在服务器上 7x24 小时不间断地运行，为全世界的用户提供服务。</p>
+<p>这彻底颠覆了旧杠杆的经济学。服务第 100 万个用户和第 101 个用户的成本几乎为零。这便是“边际成本为零”的魔力。一个只有少数几个工程师的团队，可以创造出服务数亿人的产品，比如早期的 Instagram 或 WhatsApp。这种规模化的效率是人力杠杆时代无法想象的。你不再需要为每一个新客户都雇佣一个新的“服务员”，代码本身就是那个可以无限分身的服务员。</p>
+<h4 id="媒体一次诉说无限回响"><a class="header" href="#媒体一次诉说无限回响"><strong>媒体：一次诉说，无限回响</strong></a></h4>
+<p>与代码并行的是媒体杠杆。在过去，如果你想传播一个思想，你需要拥有报纸、电视台或出版社的许可。而现在，互联网赋予了每个人建立自己“媒体帝国”的能力。你可以写一篇文章、录一期播客、发布一个视频，通过社交网络、博客平台或 YouTube，触达全球数以百万计的受众。</p>
+<p>和代码一样，媒体杠杆也是“无需许可”且“零边际成本”的。你写好的文章，多一个人阅读，并不会增加你的任何成本。你录制的播客，可以被无限次下载。这种杠杆让你能够将自己的知识、思想和影响力规模化。你不再是通过一对一的沟通去影响他人，而是通过一对多的广播，让你的声音在你睡觉时依然在世界各地回响。正如一些分析指出的，这是新时代财富创造的秘诀，通过构建可以自动化和规模化的系统，将个人影响力转化为实实在在的价值<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">5</a></sup> <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">6</a></sup>。</p>
+<p>代码和媒体的出现，标志着一个“超级个体”时代的来临。一个人，凭借这两种“无需许可杠杆”，就有可能创造出比过去一个数百人公司更巨大的商业价值。然而，即使是这种解放性的新杠杆，也依然存在一个最终的、也是最关键的瓶颈。这个瓶颈不是技术，也不是市场，而是<strong>创造者本人</strong>。</p>
+<p>一个人的时间和精力是有限的。他一天只能写这么多行代码，一周只能录这么多期播客。尽管代码和媒体可以无限复制，但它们的“第一版”却高度依赖于人类的创造力、技能和投入。增长的上限，最终被锁定在了创造者自身的生产力上。</p>
+<p>“无需许可”杠杆的悖论因此而生：分发和复制的能力是无限的，但创造的能力却依旧是有限的，它被紧紧地束缚在人类创作者自身的生物性节律之上。真正的终极问题，因此不再是如何扩大分发，而是如何规模化地“创造”。如果杠杆本身，就能够创造出新的杠杆呢？</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-4">
+<p>布鲁克斯法则是软件工程中的经典论断，它深刻揭示了人力杠杆的非线性成本。参考 Frederick P. Brooks, Jr., <em>The Mythical Man-Month</em>, Addison-Wesley, 1975。权威参考：<a href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month">https://en.wikipedia.org/wiki/The_Mythical_Man-Month</a> <a href="#fr-4-1">↩</a></p>
+</li>
+<li id="footnote-5">
+<p>邓巴数解释了为什么人类组织在特定规模上会遭遇瓶颈，这为理解“管理熵”提供了生物学和人类学的基础。参考 Robin Dunbar, “Neocortex size as a constraint on group size in primates”, <em>Journal of Human Evolution</em>, 1992。论文链接：<a href="https://www.semanticscholar.org/paper/Neocortex-size-as-a-constraint-on-group-size-in-Dunbar/d409057c3e426e85463c6d73a87474a5840639d6">https://www.semanticscholar.org/paper/Neocortex-size-as-a-constraint-on-group-size-in-Dunbar/d409057c3e426e85463c6d73a87474a5840639d6</a> <a href="#fr-5-1">↩</a></p>
+</li>
+<li id="footnote-6">
+<p>风险投资中的代理问题和短期主义是学术界和业界长期讨论的话题。投资者的压力迫使企业优先考虑短期财务表现，可能损害长期价值。参考 Harvard Business School, “Managing for the Long Term or the Short Term?”, 2020。文章链接：<a href="https://www.hbs.edu/ris/Publication%20Files/20-132_a0134a68-f52c-4977-8386-3532a24933d7.pdf">https://www.hbs.edu/ris/Publication%20Files/20-132_a0134a68-f52c-4977-8386-3532a24933d7.pdf</a> <a href="#fr-6-1">↩</a></p>
+</li>
+<li id="footnote-1">
+<p>Naval Ravikant 对“无需许可杠杆”的论述是理解新时代财富创造模式的基石。参考 J. Froment, “This is How all the New Fortunes are Made [Naval Ravikant]”, <em>Medium</em>。文章链接：<a href="https://medium.com/@jfroment4a/fresh-nuggets-this-is-how-all-the-new-fortunes-are-made-naval-ravikant-mr-beast-47eff3ffcf69">https://medium.com/@jfroment4a/fresh-nuggets-this-is-how-all-the-new-fortunes-are-made-naval-ravikant-mr-beast-47eff3ffcf69</a> <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>Reddit 社区对 Naval 的思想进行了大量的总结和提炼，是理解其理论应用场景的重要补充。参考 r/NavalRavikant 社区讨论, “The Naval Path - Build wealth through leverage”。在线阅读：<a href="https://www.reddit.com/r/NavalRavikant/comments/1o3sqol/the_naval_path_build_wealth_through_leverage/">https://www.reddit.com/r/NavalRavikant/comments/1o3sqol/the_naval_path_build_wealth_through_leverage/</a> <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>Aaditya Prakash 整理的 Naval Ravikant 语录，提供了对其核心思想的精炼概括。参考 Aaditya Prakash, “Thoughts by Naval Ravikant”。语录整理：<a href="https://iamaaditya.io/notes/startup/thoughts/">https://iamaaditya.github.io/notes/startup/thoughts/</a> <a href="#fr-3-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter2/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter2/2.2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter2/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter2/2.2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

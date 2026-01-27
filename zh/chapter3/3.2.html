@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3.2 记忆系统 - 一人独角兽</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-c7b94894.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-23faecf1.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">一人独角兽</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="32-记忆系统-memory-system"><a class="header" href="#32-记忆系统-memory-system">3.2 记忆系统 (Memory System)</a></h2>
+<p><img src="../image/sob5.jpeg" alt=""></p>
+<p>上一节我们探讨的ReAct范式，赋予了硅基员工在迷雾中“边走边想”的能力。但这立刻引出了一个更深刻、也更致命的问题：</p>
+<p><strong>一个“即思即忘”的天才，如何不在同一条河里淹死两次？</strong></p>
+<p>如果每一次任务都是一场全新的冒险，每一次决策都无法从历史中汲取丝毫智慧，那么即使拥有再强大的瞬时推理能力，这个智能体本质上仍是一台被ReAct武装起来的、更加精密的“骰子机器”。它的行动，无论成败，都如风过无痕，无法为下一次行动提供任何启示。</p>
+<p>要将这种转瞬即逝的“灵感”转化为可积累的“智慧”，我们必须为这个新物种安装一个真正的大脑。这个大脑的核心，就是它的记忆系统——一个模仿生物智慧、精心设计的多层结构。它负责将混乱的原始经验，蒸馏、提纯为指导未来的宝贵知识。</p>
+<h3 id="短期记忆-context--转瞬即逝的工作台面"><a class="header" href="#短期记忆-context--转瞬即逝的工作台面">短期记忆 (Context) —— 转瞬即逝的工作台面</a></h3>
+<p>首先，是硅基员工的<strong>短期记忆</strong>。这便是大语言模型那扇著名的“上下文窗口（Context Window）”。</p>
+<p>它就像我们思考时临时的“工作台面”，或是计算机中那条高速运转的内存（RAM）。当你下达指令、提供范例、或是与它进行多轮对话时，所有相关的即时信息都被铺在这个台面上，供它快速抓取和处理。这个台面的优点是极度高效、迅捷，确保了对话的流畅和任务的连贯。</p>
+<p>但它的缺点也是致命的：<strong>断电即失</strong>。</p>
+<p>一旦会话结束，API调用完成，这个“工作台面”就会被瞬间清空，所有宝贵的上下文——那些你精心设计的提示、它刚刚领悟的细微差别——都将烟消云散。这就像你重金聘请了一位才华横溢的顾问，每次与他交谈都火花四溅，他总能精准领会你的意图。但只要他走出房间，就会把你和刚才聊过的一切忘得一干二净。下一次会议，你必须从“你好，我是谁”开始，把所有背景信息原封不动地再讲一遍。</p>
+<p>对于一个追求效率和自动化的AI原生企业而言，这种“周期性失忆”是不可接受的。因此，我们需要一个完全相反的机制来弥补。</p>
+<h3 id="永久记忆-cold-storagelogs--不可篡改的黑匣子"><a class="header" href="#永久记忆-cold-storagelogs--不可篡改的黑匣子">永久记忆 (Cold Storage/Logs) —— 不可篡改的黑匣子</a></h3>
+<p>与短暂的工作台面相对的，是硅基员工的<strong>永久记忆</strong>。它的形态不是精炼的知识，而是一份<strong>包罗万象、不可篡改、精确到毫秒的流水账（Audit Logs）</strong>。</p>
+<p>想象一下飞机上的“黑匣子”。无论发生什么，它都忠实地记录下每一个操作、每一条指令、每一次与外部世界的交互。AI Agent的永久记忆正是这样一个数字黑匣子。它不带任何偏见和遗漏，全量记录下Agent自诞生以来做过的每一件事、每一次决策、每一次API调用、每一次成功与失败。</p>
+<p>这份记忆的核心价值，不在于让Agent直接调用来“回忆”某事——因为这里面充满了海量的、未经处理的原始数据，直接读取无异于大海捞针。它的真正价值，是为我们——系统的架构师和审计员——提供了一个<strong>绝对客观、可供追溯的唯一事实来源</strong>。</p>
+<p>当系统出现严重错误，我们需要复盘问题根源时；当某个Agent的行为偏离了预期，我们需要分析其决策链时；甚至在未来，当我们的AI企业面临法律合规审查，需要证明某个决策并非出于恶意时——这份“黑匣子”都将是我们最有力的、或许是唯一的依据。</p>
+<p>它不直接负责让Agent“变聪明”，它负责确保Agent的所作所为，永远处于我们的监督之下，让这个强大的数字雇员，始终是一个<strong>透明、可控、可被问责</strong>的存在。</p>
+<h3 id="长期记忆-long-term-memory--智慧的基石与知识提炼工厂"><a class="header" href="#长期记忆-long-term-memory--智慧的基石与知识提炼工厂">长期记忆 (Long-term Memory) —— 智慧的基石与知识提炼工厂</a></h3>
+<p>好了，现在我们有了一个“即时的工作台面”和一个“永存的黑匣子”。但真正的智慧，既非过目即忘的灵感，也非杂乱无章的流水账。智慧，是对经验的<strong>消化、吸收与提炼</strong>。</p>
+<p>这，就是<strong>长期记忆</strong>的使命，也是构建一个真正“会学习”的智能体的核心所在。</p>
+<p>我们必须明确，几年前流行的、基于向量数据库的RAG（检索增强生成）方案，并不能完全胜任这个角色。它更像一个堆满了原始资料的图书馆，虽能根据你的问题（Query）找到相关的书籍（Documents），但它本身无法阅读、理解和总结这些书籍。你问它“上次为什么失败了？”，它可能会把一万字的错误日志（Logs）原封不动地丢给你，让你自己去读。</p>
+<p>一个真正的长期记忆系统，其目标不是存储信息，而是<strong>蒸馏智慧</strong>。以开源项目 <strong><code>Mem0</code></strong> 为代表的新一代“通用记忆层（Universal Memory Layer）”为我们揭示了这种可能性<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup> <sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup> <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup>。它像一个孜孜不倦的助理，遵循着一个远比RAG更精密的“提取-关联-整合”三步流程，将原始经验转化为可用的知识：</p>
+<ol>
+<li>
+<p><strong>提取结构化的“核心事实”</strong>：它首先会主动地、持续地阅读“永久记忆”那包罗万象但无比庞杂的流水账，从中<strong>提取出结构化的“核心事实”</strong>。例如，它能从一段三十分钟的会议录音日志中，精准地提炼出一条关键信息：<code>“决策：项目‘阿尔法’的截止日期从8月1日调整为9月15日，原因是上游API供应商出现延误。”</code></p>
+</li>
+<li>
+<p><strong>建立可追溯的“记忆索引”</strong>：每一个被提取出的“核心事实”都不会成为空中楼阁。它始终带有一个精确的索引，指向其在“永久记忆”中的原始出处（那段三十分钟录音日志的具体时间戳）。这赋予了系统一种强大的“钻取（Drill Down）”能力：我们可以通过检索“核心事实”快速定位关键信息，又能在必要时（比如，想知道是谁在会上提出的延期建议）瞬间回到最原始、最完整的上下文语境中去核查细节。</p>
+</li>
+<li>
+<p><strong>执行“非破坏性”的“智能整合”</strong>：这是最关键的一步。当一个新的“核心事实”被提取出来后，<code>Mem0</code> 会将其与自身已有的记忆库进行比对，并执行一套优雅的更新逻辑：</p>
+<ul>
+<li>如果这是一个全新的知识，则<strong>新增</strong>。</li>
+<li>如果它与旧有事实冲突（如上述项目截止日期调整），系统会采纳新事实，同时将旧事实<strong>标记为“过时”（Outdated），但绝不删除</strong>。</li>
+<li>如果新事实是对旧事实的补充，系统则会将其<strong>合并</strong>。</li>
+</ul>
+</li>
+</ol>
+<p>这种“非破坏性更新”机制至关重要，它为AI保留了完整的“历史感”，使其明白“我们曾经计划8月1日上线，但现在改到了9月15日，原因是……”，从而避免在未来的决策中产生记忆混淆。</p>
+<p>最终，正是这种“提取-关联-整合”的精密流程，构建了一个能自我净化、有历史感的动态知识图谱。这赋予了它一种极其强大的、超越生物大脑的“超级记忆”：</p>
+<p>它既能像人脑一样，忘记无关的像素级细节，只保留高价值、概念级的“核心概要”（比如“项目延期了，因为供应商问题”）；又能像机器一样，在需要时通过“记忆索引”完美地、无损地回溯到那个“概要”诞生时的全部场景（比如复盘会议的完整录音和文字记录）。</p>
+<p>这种兼具了“生物的抽象智慧”与“机器的绝对精度”的记忆能力，才真正让我们的硅基员工拥有了将原始数据（Data）转化为结构化信息（Information），再将信息提炼为可用知识（Knowledge）的非凡能力。当它再次面对新任务时，它不再是一个空空如也的“天才”，而是会首先检索自己的长期记忆，自问：“关于这个任务，我过去有哪些成功经验或失败教训？”</p>
+<p>这，就是“吃一堑，长一智”在数字世界最真实的写照。它让智能体获得了学习和记忆的能力，为硅基员工从“执行工具”到“进化伙伴”的终极跃迁，奠定了不可或缺的生理基础。</p>
+<p>当然，拥有了记忆这个“大脑”还不够。如何建立一套有效的反馈机制，让智能体能够利用这些被存储的知识来指导未来的行动、形成真正的“进化闭环”？这便是我们将在本章稍后深入探讨的 PDCA 循环。</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>Mem0 是一个为AI Agent设计的开源通用记忆层，其GitHub仓库提供了具体的实现代码。参考 “mem0ai/mem0: Universal memory layer for AI Agents”, <em>GitHub</em>。项目链接：<a href="https://github.com/mem0ai/mem0">https://github.com/mem0ai/mem0</a> <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>Mem0 的论文摘要精炼地概述了其核心思想，即如何通过智能的数据结构和管理策略，在降低AI Agent的延迟与成本的同时，实现可扩展的长期记忆。参考 “Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory (Abstract)”, <em>arXiv</em>。论文摘要：<a href="https://arxiv.org/abs/2504.19413">https://arxiv.org/abs/2504.19413</a> <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>Mem0 的论文全文深入探讨了其在生产级Agent中的系统架构、性能基准和设计哲学，对于希望构建高级AI应用的架构师具有很高的参考价值。参考 “Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory (HTML)”, <em>arXiv</em>。论文全文：<a href="https://arxiv.org/html/2504.19413v1">https://arxiv.org/html/2504.19413v1</a> <a href="#fr-3-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter3/3.1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter3/3.3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter3/3.1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter3/3.3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

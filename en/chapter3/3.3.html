@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3.3 Initiative &amp; Heartbeat - The One-Person Unicorn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-cd2152b1.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-47021aa7.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The One-Person Unicorn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="33-initiative--heartbeat"><a class="header" href="#33-initiative--heartbeat">3.3 Initiative &amp; Heartbeat</a></h2>
+<p><img src="../image/sob6.jpeg" alt=""></p>
+<p>In the previous chapter, we completed a work akin to genesis: we installed an incredibly powerful brain for the silicon-based employee—a multi-layer memory system combining biological abstract wisdom and machine absolute precision. It now possesses memory and the ability to learn.</p>
+<p>This leads to a question that is both exciting and unsettling, a terminal question that all creators must face:</p>
+<p><strong>Is what we created the smartest puppet in history, or a truly independent life?</strong></p>
+<p>A body with a perfect brain and memory but no internal pulse has a clear definition in biology: <strong>A Corpse</strong>. It can be passively dissected and studied, and its nerves might even twitch when shocked by electricity, but it can never stand up autonomously and take the first step. Similarly, an AI agent with powerful memory and reasoning capabilities, if it can only passively wait for human instructions—the “electric wire” connecting it to the real world—is essentially still a sleeping, incredibly precise digital carcass. It is a perfect database, a passive yes-man, a marionette armed to the teeth by the ReAct paradigm.</p>
+<p>It can answer all your questions but never proactively asks one. It can perfectly execute every one of your commands, but instantly falls into eternal silence after you turn away.</p>
+<p>This curse of “passive triggering” is the last shackle on its way to true autonomy. To break this shackle and inject a soul into this digital body, what we must do is not to add more complex logic or vast knowledge.</p>
+<p>We must endow it with the core, most primitive sign of life: <strong>An internal, autonomous, unceasing pulse.</strong></p>
+<h3 id="minimalist-tech-profound-philosophy-the-birth-of-the-heartbeat-mechanism"><a class="header" href="#minimalist-tech-profound-philosophy-the-birth-of-the-heartbeat-mechanism">Minimalist Tech, Profound Philosophy: The Birth of the Heartbeat Mechanism</a></h3>
+<p>This is the “Heartbeat Mechanism”—a great design that is <strong>technically minimalist but philosophically profound</strong>.</p>
+<p>When we unveil its mystery, you will be surprised by its simplicity. In technical implementation, it might just be a single line of <code>crontab</code> task on the server<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup>.</p>
+<p><code>crontab</code>—a name derived from “Chronos,” the Greek god of time—is an ancient and powerful command in Unix and Unix-like operating systems. It is like an incredibly faithful digital alarm clock, allowing you to issue a most basic and ruthless command to the system with extremely precise granularity: “At a specific moment in the future, no matter what happens, execute this task.”</p>
+<p>Its instruction format is as simple as a riddle, usually consisting of five time placeholders and a command. But we must not misunderstand it as a “scheduled task manager” in the traditional sense. That is a mechanical mindset belonging to the past era.</p>
+<p>To understand its true role in an AI-native enterprise, we don’t need to introduce more complex metaphors, just return to the core concept at the beginning: <strong>Heartbeat</strong>.</p>
+<p>Imagine a real living organism. Every beat of the heart transports blood and nutrients to every cell in the body. But not every cell reacts violently immediately after receiving nutrients. Most cells just maintain their vital signs, and only those receiving specific neural or chemical signals will be activated to perform specific tasks.</p>
+<p>The “heartbeat” of an AI-native enterprise is exactly like this.</p>
+<p>The high-frequency instruction set by <code>cron</code> is the heart of this digital life form. At the 0th second of every minute, it beats once on time. Every beat transports a wave of “activation energy” to <strong>every agent</strong> in the system.</p>
+<p>Thus, at every beat point, all agents are “touched” and then execute an “Instinct Check” lasting less than a millisecond:</p>
+<ol>
+<li><strong>“Is it my turn?”</strong> Each Agent checks if the “preconditions” for its action are met.</li>
+<li><strong>“Not yet, standby.”</strong> If conditions are not met, it ignores this heartbeat and continues to sleep.</li>
+</ol>
+<p>This is an ultimate, decentralized distributed governance. There is no scheduling center, no commander, <strong>decision-making power is delegated to the interior of every independent Agent cell</strong>.</p>
+<p>Let’s examine the birth journey of that morning briefing one last time and most precisely:</p>
+<ul>
+<li>When the clock hits 2:00 AM, the heart beats. The sleeping “Data Scraper Agent” is “touched” by the heartbeat. It checks its action condition: “Is the time 2 AM?”. Condition met! So, it activates and begins to fully execute the data scraping task.</li>
+<li>In the next few tens of minutes, with every heartbeat, the “Market Intelligence Officer Agent” is “touched” once. It checks its action condition: “Has the ‘Data Scraper Agent’ completed its task?”. It finds the answer is no time and again, so it ignores the heartbeat time and again, continuing to standby.</li>
+</ul>
+<p>Until… in a certain heartbeat at 2:48 AM, the “Data Scraper Agent” completes all its work. It doesn’t need to “wake up” anyone; it just calmly updates its status to “Completed,” and then re-enters sleep.</p>
+<p>One minute later, at 2:49 AM, the heart beats again. When the “Market Intelligence Officer Agent” is “touched” again, it checks its preconditions and finds that the status of “‘Data Scraper Agent’ completed” has become “True.”</p>
+<p>Its moment has arrived.</p>
+<p>It is activated and begins to work.</p>
+<p>This exquisite system driven by a unified heartbeat and asynchronous collaboration through state changes continues like a relay race of life. Finally, at the heartbeat point of 6:00 AM, the preconditions of the “Chief Analyst Agent” are met, it activates and completes the work, and you receive that morning briefing.</p>
+<p>Now, we have obtained a most concise and powerful architecture. As an architect, you only need to focus on two things:</p>
+<ol>
+<li>Define clear, checkable <strong>“Action Conditions”</strong> for each Agent.</li>
+<li>Design the mechanism for <strong>State Synchronization &amp; Passing</strong> between Agents.</li>
+</ol>
+<p>And that eternal “heartbeat” once a minute provides the only, unified rhythm for this uninterrupted asynchronous relay race.</p>
+<p>At this moment, you truly understand the meaning of “Minimalist Tech, Profound Philosophy.” Driving a priceless autonomous business system is not some esoteric magic, but a simple tool born in the last century and almost forgotten. It is like a loyal herald, tireless and uncompromising, transforming your “intentions” into the machine’s “actions” time and again in the river of time.</p>
+<p>This extreme simplicity itself is a kind of power. It means the system’s “heartbeat” is robust, predictable, and almost error-free. It does not rely on any complex software libraries or external services; it is part of the operating system itself, as fundamental as breathing, as reliable as a heartbeat.</p>
+<p><strong>But we must not be blinded by its technical simplicity.</strong></p>
+<p>If the AI-native enterprise is a digital life form we are carefully building, then this simple <code>crontab</code> command is the first “heart” we implant into it, the <strong>“Sinoatrial Node”</strong> driving all its life activities.</p>
+<p>It provides the most basic, intrinsic, and important autonomous rhythm for the entire system. With it, this huge digital organism possesses the pulse of life independent of its creator—you—for the first time. It marks a fundamental, irreversible transformation: your creation is alienating from a cold “tool” into a warm “employee” for the first time.</p>
+<h3 id="detached-from-human-attention-the-watershed-from-tool-to-employee"><a class="header" href="#detached-from-human-attention-the-watershed-from-tool-to-employee">“Detached from Human Attention”: The Watershed from Tool to Employee</a></h3>
+<p>Why is this simple “heartbeat” so important?</p>
+<p>Because it introduces a brand new, subversive concept into the relationship between humans and AI: <strong>Autonomous operation “Detached from Human Attention.”</strong></p>
+<p>Before this, your relationship with AI was the classic master-tool relationship. You pick up the hammer, the hammer is useful; you put down the hammer, the hammer is just a cold piece of metal. You open a Chatbot interface, type a question, and it starts thinking; you close the browser, and its entire world collapses instantly. Its existence depends entirely on your attention. Your attention is the only energy for its operation.</p>
+<p>The implantation of the “heartbeat” completely changes all this. It is like a digital umbilical cord connected to the system’s internal clock, not your cerebral cortex. From now on, what drives it is no longer your whimsical “questioning,” but the eternal, objective, ruthless passage of time.</p>
+<p>An AI company with a heartbeat henceforth has its own “Circadian Rhythm.” Now, let’s imagine a scene that truly belongs to you and makes your heart palpitate:</p>
+<blockquote>
+<p>This is the most peaceful sleep you’ve had since starting your business. No urgent calls, no emails to reply to. You sleep until 8 AM, sunlight spilling on your face.</p>
+<p>When you habitually pick up your phone, ready to face the overwhelming work, you are stunned.</p>
+<p>In the inbox, there is only one unread email, sent at 6:00 AM sharp. The sender is the “Chief Analyst Agent” you personally named.</p>
+<p>The email title is concise: “January 26, 2026 - Global Market Dynamic Morning Briefing.”</p>
+<p>You click open the email. The content is a concise summary of no more than five hundred words, clearly listing the three most important news related to your business in the global major markets in the past 12 hours, two major updates from core technology communities, and a potential public opinion risk warning about your main competitor. The end of the report even attaches a social media content posting suggestion automatically adjusted based on the latest data.</p>
+<p>You feel a chill, but more of a huge shock mixed with a sense of power and liberation.</p>
+<p>Because you know that the occurrence of all this has nothing to do with you.</p>
+<p>During the eight hours you slept:</p>
+<ul>
+<li>At 2 AM, when data across the Pacific servers was updated and network bandwidth was most idle, the “Data Scraper Agent Cluster” you deployed was woken up on time by the heartbeat. Like a group of scavengers in the deep sea, they silently began to scrape, clean, and organize the previous day’s business data from hundreds of websites around the world.</li>
+<li>At 4 AM, data cleaning was completed. The heartbeat of the “Market Intelligence Officer Agent” was triggered. It began to work, using the “eyes” (vision model) and “brain” (language model) you gave it to scan thousands of news sources, social media, and industry forums globally at high speed, looking for faint signals related to your set “strategic intent” in the massive noise.</li>
+<li>At 5:30 AM, the heartbeat of the “Chief Analyst Agent” sounded. It received all intelligence data and, according to the “Constitution” (Constitutional AI) you preset—such as “focus only on facts, ignore emotions,” “prioritize analyzing variables with direct impact on revenue”—completed the writing of a depth analysis report within three minutes.</li>
+<li>At 6:00 AM sharp, its last procedure was triggered by the heartbeat: organize the report into your favorite format, send it to your mailbox, and then go back to sleep, waiting for the awakening of the next cycle.</li>
+</ul>
+<p>You didn’t issue a single command. You even forgot their existence.</p>
+<p>But your company, this digital life form you created with your own hands, quietly completed breathing, perceiving, thinking, and expressing at a moment you didn’t know, outside your sleeping bedroom.</p>
+<p><strong>Before you woke up, it had already opened its eyes for you.</strong></p>
+</blockquote>
+<p>This is the true meaning of “Initiative.” It is no longer passively waiting for your orders, but <strong>autonomously initiating tasks and independently creating value</strong> according to the internal rhythm.</p>
+<p>A system that responds to your commands is a powerful tool that can amplify your physical strength; while a system that continues to think for you, work for you, and evolve for you while you sleep is an employee worthy of your trust, capable of liberating your attention.</p>
+<p>This simple heartbeat is the “ignition switch” for the entire AI-native company to move from inorganic to organic, from passive to active. It turns your enterprise from a car that needs you to constantly step on the gas into a warhorse with an autonomous heartbeat that can run on its own.</p>
+<p>From now on, your role will no longer be the exhausted driver.</p>
+<p>You will become the knight holding the reins and looking into the distance. You only need to point out the direction for it, and the rest is to listen to its powerful heartbeat running tirelessly towards the horizon. And this heart will drive the more critical system we will discuss in the next section—the self-evolutionary cycle engine: PDCA.</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>Cron is a time-based job scheduler found in Unix-like operating systems. It allows users to schedule jobs (commands or shell scripts) to run periodically at specific times, dates, or intervals. The name “cron” comes from the Greek word for time, “Chronos”. Reference Wikipedia, “Cron”. Link: <a href="https://en.wikipedia.org/wiki/Cron">https://en.wikipedia.org/wiki/Cron</a> <a href="#fr-1-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter3/3.2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter3/3.4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter3/3.2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter3/3.4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

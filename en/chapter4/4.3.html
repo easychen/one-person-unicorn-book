@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>4.3 Collaboration Topology - The One-Person Unicorn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-cd2152b1.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-47021aa7.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The One-Person Unicorn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="43-collaboration-topologies"><a class="header" href="#43-collaboration-topologies">4.3 Collaboration Topologies</a></h2>
+<p><img src="../image/sob9.jpeg" alt=""></p>
+<p>After establishing the “Constitution” and “Guardrails” for our legion of silicon-based employees, we face an equally critical organizational design question: How do we enable these independent agents to collaborate efficiently and creatively?</p>
+<p>In human management, the design of organizational structure is often an art of compromise. Pyramidal, matrix, flat… each structure tries to balance command efficiency and individual creativity, but often loses one to save the other.</p>
+<p>More importantly, once established, these structures are extremely rigid and costly to adjust. However, in AI-native enterprises, we can start from first principles and completely subvert traditional organizational theory. The core idea here is: <strong>Structure Follows Objective</strong>.</p>
+<p>We no longer need to look for a universal, fixed organizational “shape,” but dynamically and instantly build the most suitable collaboration “topology” according to the “objective function” of the current task—whether it is to optimize efficiency, stimulate creativity, or ensure safety. Just as water has no fixed shape and naturally fills the form of the container, the collaboration topology of an AI organization has no fixed pattern and will perfectly adapt to the intrinsic requirements of the objective function. This fluid design philosophy gives the one-person enterprise unprecedented organizational agility, enabling instant switching of “formations” between tasks of different natures to meet all challenges with the optimal posture.</p>
+<p>Next, we will analyze three core collaboration topologies born for different objective functions: Efficiency, Emergent, and Safety.</p>
+<h3 id="1-efficiency-topology-assembly-linehierarchy"><a class="header" href="#1-efficiency-topology-assembly-linehierarchy">1. Efficiency Topology (Assembly Line/Hierarchy)</a></h3>
+<p>When the objective function is <strong>“to maximize output efficiency and consistency of results under a determined process,”</strong> the Efficiency Topology is our best choice. The essence of this topology is to borrow from the greatest productivity tool verified countless times since the Industrial Revolution—the Assembly Line. In the digital world, it transforms into a hierarchical structure composed of multiple specialized Agents with clear division of labor and tight connection. This is like a “Foxconn” in the digital world, where each Agent is a station on the production line, focusing on a specific process, and its output strictly and unambiguously becomes the input of the next station. The entire process is carefully designed as a “Directed Acyclic Graph” (DAG), ensuring the unidirectional, orderly, and efficient flow of information. Many popular AI workflow orchestration tools, such as Coze or Dify, have at their core the ability for users to easily build such efficiency topologies through visual interfaces.</p>
+<p>Let’s use a most common “Automated Content Factory” as an example to deconstruct this digital assembly line. The starting point of the task might just be a simple keyword, such as “The Future of Artificial Intelligence.”</p>
+<ul>
+<li><strong>Station 1: Researcher Agent</strong>. Its sole responsibility is to receive keywords, then use search engine tools to crawl the latest and most authoritative relevant articles, reports, and papers on the entire network, and organize them into a structured raw material document. Its goal is to pursue “Breadth” and “Timeliness.”</li>
+<li><strong>Station 2: Outliner Agent</strong>. Its input is only the material document produced by the Researcher Agent. It is instructed to read deeply, understand, and refine, and then output a logically clear and rigorously structured article outline, possibly including a preface, three core arguments, and a conclusion. Its goal is to pursue “Structure” and “Logic.”</li>
+<li><strong>Station 3: Writer Agent</strong>. In its world, there is only the outline just generated. Its task is “fleshing out,” expanding each node of the outline into complete paragraphs with smooth writing and sufficient arguments, finally forming the first draft of the article. Its goal is to pursue “Readability” and “Persuasiveness.”</li>
+<li><strong>Station 4: Illustrator Agent</strong>. It reads the first draft of the article, automatically analyzes the core content of each paragraph, and then calls a text-to-image model (such as Midjourney or DALL-E 3) to generate consistent style illustrations and insert them into the appropriate positions in the article. Its goal is to pursue “Relevance” and “Aesthetics.”</li>
+<li><strong>Station 5: Editor Agent</strong>. As the last link of the assembly line, it is responsible for grammar checking, fact-checking (by calling external knowledge bases), and comparing with the brand tone in the “Constitution” for the final text and image manuscript. Only after ensuring everything is perfect does it finally “approve” the release.</li>
+</ul>
+<p>On this assembly line, every Agent is deprived of the right to “freestyle.” The Writer Agent cannot skip the outline to create directly, and the Illustrator Agent cannot start anew based on its own preferences. The output of the upstream becomes the only unquestionable “Imperial Edict” for the downstream. This strict constraint minimizes system uncertainty, making it possible to produce a thousand or ten thousand articles of highly consistent quality in a day. The advantages of this topology are obvious: extreme efficiency, predictable results, and absolute control over the process. However, its disadvantages are equally obvious—it almost completely kills the possibility of “Surprise” and “Emergence.” It can stably turn a “60-point” process into an “80-point” one, but it can never create that “120-point” masterpiece. Therefore, when our goal shifts from “Execution” to “Exploration,” we must completely abandon the assembly line and turn to a completely different, even somewhat “chaotic” collaboration mode.<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></p>
+<h3 id="2-emergent-topology-blackboardnetwork"><a class="header" href="#2-emergent-topology-blackboardnetwork">2. Emergent Topology (Blackboard/Network)</a></h3>
+<p>Unlike the disciplined “Army,” the Emergent Topology is more like a lively academic seminar gathering top thinkers from various fields, or a detective’s “Case Analysis Room” covered with clues, photos, and notes. Its goal is no longer efficient “Execution,” but to maximize the depth of exploration and the diversity of creativity within an uncertain problem space. The core of its design also shifts from “controlling” information flow to “stimulating” collision of ideas. In computer science, this pattern has a classic name—“Blackboard System.”<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup> This architecture consists of three core parts: a <strong>Shared “Blackboard”</strong> that all Agents can read and write, a group of <strong>Expert Agents (Knowledge Sources)</strong> with different knowledge, perspectives, and skills, and a <strong>Controller</strong> who decides which expert “speaks” currently.</p>
+<p>Imagine that as the architect of a one-person enterprise, you face an extremely open and complex strategic question: “Which new business area should our company enter in the next five years?” This is a question with no standard answer and cannot be broken down into a linear assembly line. At this time, you can form a “Strategy Committee” composed of multiple Expert Agents and write this question on the central “Blackboard.”</p>
+<ul>
+<li><strong>“Market Analyst” Agent</strong> speaks first. It calls crawler tools to grab global venture capital databases, industry reports, and news, and posts the data of the ten most potential emerging tracks and their market sizes and growth rates on the blackboard in the form of charts.</li>
+<li><strong>“Tech Prophet” Agent</strong> then appears. It examines these ten tracks and points out: “Three of these tracks (A, B, C) rely heavily on ‘Quantum Computing’ technology which is not yet mature, and the risk is too high.” It marks these three options in red on the blackboard.</li>
+<li><strong>“Pessimist” Agent</strong> follows closely. It launches a fierce attack on the remaining seven tracks, picking faults one by one from the perspectives of legal risk, competitors, supply chain fragility, etc., and writes sharp comments on the blackboard: “The user privacy compliance issue of Track D will be a nightmare.” “The top players in Track E have already formed a network effect, and we have no chance.”</li>
+<li><strong>“Optimist” Agent</strong> sees the gap left by the “Pessimist” at this moment. It writes next to the comment on “Track D”: “This is exactly our opportunity! If we can build a product with ‘privacy protection’ as the core selling point, we can form a differentiated advantage.” It even calls a “Business Model Canvas Generation” tool to quickly draw a sketch on the blackboard.</li>
+<li><strong>“User Experience Designer” Agent</strong> has been observing silently. At this time, it proposes improvements to the sketch of the “Optimist”: “This model is good, but we can make the user interface more gamified to improve the retention rate of early users.”</li>
+</ul>
+<p>In this process, you as the controller (or a higher-level “Moderator” Agent) guide the flow of “conversation,” ensuring the discussion does not deviate from the topic, and invite the most suitable experts to speak at key nodes. All Agents share the same information space; they can see each other’s ideas, inspire each other, question each other, and complement each other.</p>
+<p>Ultimately, what “Emerges” from this seemingly chaotic “graffiti” will be a strategic direction that is far more profound, comprehensive, and creative than any single Agent can think of independently. The output of this process is not only the final conclusion but also the complete thinking trajectory left on the blackboard—including those rejected paths that led to dead ends. This entire process itself is an invaluable “Cognitive Asset.” This topology sacrifices some efficiency in exchange for the possibility of discovering “Non-Consensus” opportunities, which is the core engine for “One-Person Unicorns” to conduct high-level decision-making and disruptive innovation.<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></p>
+<h3 id="3-safety-topology-adversarial"><a class="header" href="#3-safety-topology-adversarial">3. Safety Topology (Adversarial)</a></h3>
+<p>Finally, there is a more stringent objective function: <strong>“To ensure the absolute safety, accuracy, and impeccability of output content under any circumstances.”</strong> For this, we need a Safety Topology driven by “Self-Negation.” The inspiration for this mode comes from “Generative Adversarial Networks” (GANs) in the field of machine learning, applying its philosophy to Agent collaboration.<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup> Its essence is to build a pair of never-ending “Red and Blue Teams” within the organization—a <strong>Generator Agent</strong> responsible for “Creation” and an <strong>Adversary Agent</strong> responsible for “Destruction.” This is like setting up a “Chief Risk Officer” or “General Prosecutor” with the highest power inside your company who is always nitpicking. Any high-risk content that needs to be released externally must first pass its purgatory-like interrogation.</p>
+<p>Suppose your AI company needs to release a public press release about the performance of a new product. The risk of this task is extremely high; any tiny exaggeration, inaccurate description, or potential misleading can trigger a PR crisis or even legal disputes. At this time, the Safety Topology will start.</p>
+<ul>
+<li><strong>Step 1: Generation.</strong> The “Marketing Copywriter” Agent (Generator) writes the first draft of the press release based on the product technical documentation. It is eloquent and full of exciting words like “Industry Leading” and “Unprecedented.”</li>
+<li><strong>Step 2: Adversarial.</strong> This draft is immediately submitted to the “General Prosecutor” Agent (Adversary). In the program of this Agent, there is no word “Praise.” Its “Arsenal” is filled with various critical tools:
+<ul>
+<li><strong>Fact Checker</strong>: It automatically extracts all key data in the manuscript (such as “Performance increased by 300%”) and compares it with the backend test database.</li>
+<li><strong>Logical Fallacy Detector</strong>: It is specially trained to identify dozens of logical loopholes such as “Straw Man Fallacy,” “Slippery Slope Fallacy,” and “Appeal to Authority.”</li>
+<li><strong>Legal Compliance Scanner</strong>: It has built-in knowledge bases of relevant laws such as Advertising Law and Data Security Law, reviewing the manuscript word by word for compliance.</li>
+<li><strong>Brand Safety Dictionary</strong>: It masters a list of words that need to be used with extreme caution.</li>
+</ul>
+</li>
+<li><strong>Step 3: Critique Report.</strong> The “General Prosecutor” Agent quickly generates a report full of negative opinions and rejects it back to the “Marketing Copywriter” Agent: “Rejection reasons: 1. ‘Performance increased by 300%’ does not match the 287% in the test database, violating the ‘Factual Accuracy’ principle. 2. ‘Unprecedented’ is a subjective assertion lacking third-party evidence, violating the regulations on extreme words in the Advertising Law. 3. The third paragraph compares our product with the early version of Competitor X, which belongs to the ‘Straw Man Fallacy’ and is misleading.”</li>
+<li><strong>Step 4: Revision and Loop.</strong> After receiving the critique report, the “Marketing Copywriter” Agent has no choice but to modify its manuscript item by item according to these irrefutable opinions. The modified second draft is submitted again. This “Generate-Adversary-Revise” loop will continue until the “General Prosecutor” Agent can no longer find any loop to attack and finally gives an “Approved” conclusion.</li>
+</ul>
+<p>Through this internal, extreme, and automated self-critique, the content that can finally “survive” will reach a near-perfect height in accuracy, compliance, and robustness. Although this topology may be the slowest in speed, it provides the most reliable safety lock for enterprises in high-risk areas such as public relations, legal affairs, financial reporting, and security protocols. For a “One-Person Unicorn” intending to operate for a long time, establishing this internal checks and balances mechanism of “Better to kill a thousand by mistake than to let one go” is not a choice, but a necessity. It deeply engraves the bottom line of “No Accidents” into the genes of the system.</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>The core of the Efficiency Topology is to build multi-agent workflows. AutoGen is a representative open-source framework for implementing such conversational, orchestratable multi-agent systems. Reference Wu, T., et al. (2023), “AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation”, <em>arXiv:2308.08155</em>. Paper Link: <a href="https://arxiv.org/abs/2308.08155">https://arxiv.org/abs/2308.08155</a>. <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>The Blackboard System is a classic architecture in the field of artificial intelligence, coordinating the collaboration of multiple heterogeneous expert knowledge sources through a shared workspace (blackboard), which is the theoretical basis of the Emergent Topology. Reference Hayes-Roth, B. (1985), “A blackboard architecture for control”, <em>Artificial intelligence</em>, 26(3), 251-321. Paper Abstract: <a href="https://www.sciencedirect.com/science/article/abs/pii/0004370285900633">https://www.sciencedirect.com/science/article/abs/pii/0004370285900633</a>. <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>A key application of the Emergent Topology is to generate deeper insights through “Debate.” The ChatEval project explores how to use multi-agent debate to improve the evaluation quality of large models as “judges,” which resonates with the concept of the “Strategy Committee” in this section. Reference Chan, C., et al. (2023), “ChatEval: Towards Better LLM-as-a-Judge with Multi-Agent Debate”, <em>arXiv:2308.07201</em>. Paper Link: <a href="https://arxiv.org/abs/2308.08155">https://arxiv.org/abs/2308.08155</a>. <a href="#fr-3-1">↩</a></p>
+</li>
+<li id="footnote-4">
+<p>The “Generator-Adversary” adversarial mode of the Safety Topology, its philosophical thought directly originates from Generative Adversarial Networks (GANs). This paper is a landmark work pioneering the GANs field. Reference Goodfellow, I., et al. (2014), “Generative adversarial nets”, <em>Advances in neural information processing systems</em>, 27. Paper Link: <a href="https://proceedings.neurips.cc/paper/2014/hash/5ca3e9b122f61f8f06494c97b1afccf3-Abstract.html">https://proceedings.neurips.cc/paper/2014/hash/5ca3e9b122f61f8f06494c97b1afccf3-Abstract.html</a>. <a href="#fr-4-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter4/4.2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter4/4.4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter4/4.2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter4/4.4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

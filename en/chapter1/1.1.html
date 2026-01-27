@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>1.1 Awakening of the Chief Intelligence Officer - The One-Person Unicorn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-cd2152b1.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-47021aa7.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The One-Person Unicorn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="11-awakening-of-the-chief-intelligence-officer"><a class="header" href="#11-awakening-of-the-chief-intelligence-officer">1.1 Awakening of the Chief Intelligence Officer</a></h2>
+<p>This prophecy comes from Sam Altman, CEO of OpenAI. He asserts that the emergence of a billion-dollar company driven by a single founder, with artificial intelligence executing most tasks—a “one-person unicorn”—is not far off<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup>. This viewpoint, like a stone thrown into a calm lake, has stirred ripples across the tech and venture capital circles. Countless people are invigorated, as if they have glimpsed the ultimate form of business<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>.</p>
+<p>However, in the real, heavy commercial world, especially in the eyes of traditional industry elites who rely on rigorous organizations and massive teams for success, this idea is nothing short of a fantasy.</p>
+<p>To understand why this prophecy is not just a slogan but a precise strike against future organizational forms, we must focus our lens on a world diametrically opposed to it—a reality that pushes “human wave tactics” to the extreme and is deeply mired in the quagmire because of it.</p>
+<h3 id="fictional-reality"><a class="header" href="#fictional-reality">Fictional Reality</a></h3>
+<p>This fictional yet true story begins in a world we are familiar with. The protagonist is named Cheng Yuan. At 35, he stands at the pinnacle of traditional commercial civilization. As one of the youngest partners at a top global strategy consulting firm, his office floats in the clouds of the city skyline. Outside the window are rows of skyscrapers; behind every window could be a client he has served. His resume is a perfect template of industrial-age elitism: an MBA from an Ivy League school, joining a top consulting firm after graduation, and skyrocketing through the ranks in ten years with extraordinary intelligence and nearly brutal diligence. He manages an elite team of over two hundred people, flying around the globe to diagnose problems and plan the future for Fortune 500 companies. His time is bought out by clients at thousands of dollars per hour, and his decisions affect the livelihoods of tens of thousands of employees and the flow of hundreds of millions in capital.</p>
+<p>However, inside this monument of glass and steel, Cheng Yuan senses a profound decay. He is trapped in a mire of his own making, a vortex he calls “management entropy.” He discovers that as the team size expands, the company’s growth curve does not steepen as expected; instead, profit margins are being swallowed by an invisible, continuously growing internal friction. His workday is chopped into countless fragments: over ten online and offline meetings, handling hundreds of emails requiring clear responses, reviewing dozens of PPTs with logical flaws or data needing updates. His team members are graduates of top universities, smart and hardworking, but the cost of organizing them is staggeringly high.</p>
+<p>Communication costs, coordination costs, decision costs… these invisible “management taxes” shroud the entire organization like a giant net. A simple client request needs to be translated, dismantled, and assigned layer by layer, then the results aggregated, aligned, and reviewed layer by layer. Every transmission is accompanied by information decay and distortion. 80% of intellectual resources are not used for creative “value output” but consumed in the “internal friction” necessary to keep this massive system running. Cheng Yuan feels less like a general devising strategies and more like a firefighter exhausted from running around. Most of his energy is spent extinguishing internal fires caused by poor communication and misaligned goals.</p>
+<p>For the “one-person unicorn” prophecy that has long circulated on the fringes of the industry, Cheng Yuan’s attitude is clear: disdain. In his view, this is merely a Silicon Valley fantasy detached from the cruel reality of business, having nothing to do with the human games and ambiguous decisions he faces daily. He tosses this thought to the back of his mind and turns to dive into the next endless conference call—</p>
+<h3 id="an-accident-from-the-future"><a class="header" href="#an-accident-from-the-future">An “Accident” from the Future</a></h3>
+<p>The outbreak of conflict originated from an internal “AI Innovation Pilot Project.” To show the outside world the company’s embrace of frontier technology, the IT department spearheaded a small AI lab. Cheng Yuan had little interest in this, considering it another PR stunt by the marketing department. To cope with the task, he allocated a relatively independent module from an ongoing consulting project as an AI “test question”: write an in-depth analysis report for a large energy group on the development trends, technical paths, and potential risks of the global photovoltaic energy storage market over the next decade.</p>
+<p>This task, for his team, was standard “manual labor.” A group of six senior consultants had been struggling with it for nearly three months. They read hundreds of industry reports, interviewed dozens of experts, organized thousands of data points, and with endless coffee and late-night overtime, piled up a 120-page exquisite PPT. This report was about to be delivered to the client as an interim result of the project.</p>
+<p>Meanwhile, a young engineer in the AI lab input the same requirement into a well-configured Large Language Model (LLM). He provided the model with a clear “role” definition (a senior industry analyst), clear goals, detailed evaluation criteria, and connected it to the company’s internal database, public academic paper repositories, and real-time global news APIs. Then, he pressed the execute button.</p>
+<p>It was Friday afternoon. Cheng Yuan spent the entire weekend dealing with an emergency in another project. It wasn’t until Monday morning that an email from the AI lab lay quietly in his inbox, titled: “Photovoltaic Energy Storage Market Analysis Report (AI Version) Generated.”</p>
+<p>Cheng Yuan clicked the link in the email, prepared to spend five minutes skimming through it before giving a polite but perfunctory reply. He expected to see a patchwork of logically chaotic text garbage, full of internet clichés. However, the content displayed on the screen instantly froze the relaxed expression on his face.</p>
+<p>That was not a PPT, but an interactive dynamic webpage. On the left was the navigation of the report’s core chapters, and on the right were data visualization charts. He clicked on the first chapter, “Market Scale Forecast,” and saw not a static bar chart, but a dynamic curve that could be adjusted in real-time based on different parameters (such as policy subsidy intensity, speed of technological breakthroughs). The market scale his team had spent three weeks debating and calculating was here just a slider that could be dragged at will.</p>
+<p>His heart sank as he began to read the body of the report word for word. The AI’s output thoroughly destroyed the professional confidence he and his team had built from three dimensions:</p>
+<p>First, <strong>crushing speed</strong>. 48 hours. The AI completed the core workload of his six-person elite team in one weekend. Three months of meetings, interviews, data cleaning, and chart drawing were compressed into a negligible unit of time in front of the AI.</p>
+<p>Second, <strong>penetrating depth</strong>. The AI report cited a large number of sources his team had never touched: a latest paper on the degradation mechanism of perovskite batteries published in <em>Nature Energy</em>, a latest draft on grid connection standards from a regulatory agency website in a certain country, and even cross-validated the actual shipment volume of major global suppliers by analyzing satellite images of ports. This information was scattered in the deep sea of the internet. Human teams would need to expend enormous energy to search, filter, and verify, while AI could capture, digest, and weave them into its logical chain instantly.</p>
+<p>Third, <strong>logical perfection</strong>. This was what terrified Cheng Yuan the most. Human consultants’ reports, no matter how modified, always retained personal biases, thinking inertia, and cognitive blind spots. But this AI report was logically flawless. Every argument was supported by clear data, and every prediction listed detailed confidence intervals and risk assumptions. It even automatically generated a “stress test” appendix, simulating how the core conclusions in the report would be impacted under several extreme “black swan” scenarios (such as geopolitical conflicts causing raw material supply interruptions, or disruptive technologies suddenly appearing). This thorough rationality and systematic comprehensiveness surpassed any of the most outstanding human analysts he had ever seen.</p>
+<p>Cheng Yuan leaned back in his chair, feeling the glaring sunlight outside the office window turn cold for the first time. A dizzying conclusion echoed repeatedly in his mind: everything he was proud of—the value creation system composed of highly educated talent, rigorous processes, and unremitting efforts—was not “in need of optimization” but “thoroughly obsolete” in the face of the new productivity paradigm.</p>
+<p>He finally realized that the real threat was not that his “job” would be replaced by AI—in fact, as the person giving the final judgment and bearing the final responsibility, his role became increasingly important. The real crisis was that the “human wave tactic” model he believed in and relied on for survival, the foundation supporting the entire consulting industry and even the modern knowledge service industry, was collapsing thoroughly from the bottom. He was not managing a group of people creating value, but managing an extremely expensive, inefficient, and friction-filled “artificial computing system.” And today, he witnessed a substitute with negligible cost and terrifyingly high efficiency.</p>
+<h3 id="the-coachmans-dilemma"><a class="header" href="#the-coachmans-dilemma">The Coachman’s Dilemma</a></h3>
+<p>In the weeks following the subversion of his cognition, Cheng Yuan often thought of that widely circulated metaphor: “If you asked a coachman before the age of automobiles what he wanted, he would almost always tell you he wanted a faster horse.”</p>
+<p>This metaphor, like a scalpel, precisely dissected the core fallacy of his career over the past decade. He and his company, as well as all the clients he served, had always been playing the role of the horse-coachman. All the innovations they pursued were essentially looking for a “faster horse”: more efficient project management software replaced handwritten memos; more convenient instant messaging tools replaced emails; more agile team collaboration methods replaced waterfall development processes. Every technological iteration excited them, thinking they were at the forefront of the times.</p>
+<p>However, these were all optimizing the old system centered on “manpower.” They made the carriage run faster, steadier, and with less effort, but the carriage was ultimately a carriage. Its speed, capacity, and scalability were limited by the physical limits of the “horse” as a biological engine. And the emergence of AI was not a faster horse, nor even a faster carriage. It was a self-driving starship. It did not follow the old rules of the game; it directly rewrote the rules themselves.</p>
+<p>Cheng Yuan realized that all past discussions about “efficiency” were built on a false premise. The problem they tried to solve was “how to make a group of people collaborate faster?”, while the question that should truly be asked is “what should the form of business be when one person can mobilize nearly infinite digital labor?”</p>
+<p>This requires a radical shift in perspective, a “Future-Back” thinking paradigm. We can no longer stand in the present and speculate a step or two into the future. We must force ourselves to stand in the future 3 to 5 years from now, a world where AI agents are as ubiquitous as smartphones today, capable of handling 98% of mid-to-high-level knowledge work in enterprises. In that world, a visionary and tasteful architect can easily employ an army composed of thousands of professional AI “employees” (such as financial analysts, programmers, marketing planners, legal advisors).</p>
+<p>Looking back at the present from that future vantage point, we can see how absurd today’s decisions are. We are still complacent about hiring an expensive engineer, ignoring that AI can already compile requirements directly into code; we are still investing heavily in building a massive content team, ignoring that AI can already instantly mold viewpoints into various forms of media.</p>
+<p>The awakening of the Chief Intelligence Officer lies not in learning how to use a certain AI tool, but in completely abandoning the obsession with the “horse.” He finally understands that his duty is no longer to crack the whip to make the carriage run faster. His new mission is to learn how to read star charts, design starships, and set a star coordinate worth pursuing, named “Vision,” for this behemoth about to set sail.</p>
+<p>This is a path no one has walked. Looking around, it is full of fog. But Cheng Yuan knows that staying on the carriage, no matter how tightly he holds the reins, will ultimately only lead to being forgotten by the times. He must get off and walk toward that cockpit flashing with unknown light. This book is the first navigation chart he drew for himself and all future fellow travelers before setting off.</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>This is the core source of the “one-person unicorn” concept, establishing the era background discussed in this book. Reference Sam Altman’s industry prediction, “Could AI create a one-person unicorn? Sam Altman thinks so”, <em>AI Automation Perth</em>. <a href="https://www.aiautomationperth.com.au/could-ai-create-a-one-person-unicorn-sam-altman-thinks-so-and-silicon-valley-sees-the-technology-waiting-for-us/">Article Link</a> <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>This video is a further interpretation of Sam Altman’s grand vision, exploring the technological possibilities behind it. Reference YouTube video, “1 Person + AI Agents = Billion Dollar Company?”. <a href="https://www.youtube.com/watch?v=AN52OZj0Thw">Video Link</a> <a href="#fr-2-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter1/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter1/1.2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter1/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter1/1.2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

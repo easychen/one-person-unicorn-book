@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>5.3 Value Capture: From Selling Shovels to Selling Well Water - The One-Person Unicorn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-cd2152b1.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-47021aa7.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The One-Person Unicorn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h2 id="53-value-capture-from-selling-shovels-to-selling-well-water"><a class="header" href="#53-value-capture-from-selling-shovels-to-selling-well-water">5.3 Value Capture: From Selling Shovels to Selling Well Water</a></h2>
+<p><img src="../image/sob15.jpeg" alt=""></p>
+<p>After building a solid “Asset Pool” and planning a flexible “Application Matrix,” we arrive at the pinnacle of the business architecture and the crucial link determining success or failure—Value Capture. How do we transform the powerful technical capabilities built in the previous chapters into sustainable revenue streams and healthy profits? This question is more critical than ever because artificial intelligence is fundamentally rewriting the rules of business.</p>
+<p>If you continue to use the old era’s “SaaS 1.0” mindset—charging per seat or per software subscription—you are burying a landmine for your future. In the AI-native era, business models are undergoing a violent tectonic shift from “selling tools” to “selling results.”</p>
+<h3 id="the-seat-paradox-self-punishment-of-technological-progress"><a class="header" href="#the-seat-paradox-self-punishment-of-technological-progress">The Seat Paradox: Self-Punishment of Technological Progress</a></h3>
+<p>Let’s first look at a counter-intuitive phenomenon. In the traditional SaaS model, you sell the usage rights of a tool, usually charging by user account (seat). For example, you develop an “AI Writing Assistant” and sell it to a marketing company, charging $20 per person per month. This company has 10 copywriters, so you earn $200 a month.</p>
+<p>But your AI is too powerful; efficiency increases by 5 times. Three months later, the company finds that the work now only requires 2 people cooperating with AI, so they lay off 8 people. The result? Your client’s efficiency skyrockets, costs plummet; but your revenue crashes from $200 to $40.</p>
+<p>This is the famous <strong>“Seat Paradox”</strong> <sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup>. In the AI-native era, the more advanced your technology, the fewer “human hands” clients need. If you insist on charging by “headcount,” you are actually punishing your own technological progress. As a one-person enterprise, you don’t have a huge sales team to constantly fill lost seats; this paradox is fatal to you.</p>
+<h3 id="service-as-a-software-saas-20-from-selling-tools-to-selling-outcomes"><a class="header" href="#service-as-a-software-saas-20-from-selling-tools-to-selling-outcomes">Service-as-a-Software (SaaS 2.0): From Selling Tools to Selling Outcomes</a></h3>
+<p>To break free from the shackles of the “Seat Paradox,” we need a complete paradigm shift: stop selling shovels, start selling the gold dug up.</p>
+<p>This is the revolutionary concept of <strong>“Service-as-a-Software” (SaaS 2.0)</strong> <sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>. In this new model, what you deliver to customers is no longer a software tool they need to learn and operate themselves, but a direct, reliable, quantifiable business outcome. Your product form evolves from a passive software into an active, tireless virtual employee.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Comparison Dimension</th><th style="text-align: left">Traditional SaaS (Software as a Service)</th><th style="text-align: left">Service-as-a-Software (SaaS 2.0)</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>Core Value</strong></td><td style="text-align: left">Provide efficient tools</td><td style="text-align: left">Deliver quantifiable results</td></tr>
+<tr><td style="text-align: left"><strong>User Role</strong></td><td style="text-align: left">Operator, User</td><td style="text-align: left">Supervisor, Result Acceptor</td></tr>
+<tr><td style="text-align: left"><strong>Pricing Logic</strong></td><td style="text-align: left">Based on usage rights (Per Seat/Feature)</td><td style="text-align: left">Based on value/outcome (Per Result/Cost Savings)</td></tr>
+<tr><td style="text-align: left"><strong>Competitors</strong></td><td style="text-align: left">Other software tools</td><td style="text-align: left">Traditional service providers, outsourcing firms, internal labor</td></tr>
+<tr><td style="text-align: left"><strong>Example</strong></td><td style="text-align: left">You sell CRM software; clients use it to manage sales</td><td style="text-align: left">You provide “Sales Lead Gen Service”; charge per qualified lead</td></tr>
+<tr><td style="text-align: left"><strong>Essence</strong></td><td style="text-align: left">Selling Shovels</td><td style="text-align: left">Selling Dug-up Gold (or providing continuous well water)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Taking the law firm we mentioned earlier as an example, under the “Service-as-a-Software” framework, what you provide is no longer “AI Legal Assistant Software,” but “AI Contract Review Service.” Your sales pitch changes to:</p>
+<blockquote>
+<p>“You no longer need to hire a team of junior lawyers to handle tedious contract reviews. Upload your contracts to our system, and our AI legal advisor will generate a complete review report containing risk points, clause suggestions, and compliance checks within 10 minutes. You only pay per review report, or choose a monthly package to process unlimited contracts.”</p>
+</blockquote>
+<p>See the difference? When you deliver the result “financial report” (Outcome), your pricing power takes a qualitative leap. You are no longer competing with $20 software, but with human part-time accountants costing $2000 a month. Using AI’s low cost (Token) to earn the high premium of human service (Service Fee)—this huge scissors gap is the profit goldmine of AI-native enterprises <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup>.</p>
+<h3 id="the-art-of-value-capture-pricing-strategy-for-one-person-enterprises"><a class="header" href="#the-art-of-value-capture-pricing-strategy-for-one-person-enterprises">The Art of Value Capture: Pricing Strategy for One-Person Enterprises</a></h3>
+<p>Of course, shifting completely to a “Pay-for-Performance” model might be too risky for individual entrepreneurs with limited resources. If your AI model isn’t stable enough, or there’s a divergence in the definition of “result” between you and the client, you might bear all operating costs and earn nothing <sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</p>
+<p>Therefore, a more pragmatic, flexible <strong>“Hybrid Pricing Model”</strong> is the best starting point. It’s like a formation capable of both offense and defense, ensuring your basic survival while allowing you to share the fruits of customer success.</p>
+<h4 id="1-hybrid-pricing-base--commission"><a class="header" href="#1-hybrid-pricing-base--commission">1. Hybrid Pricing: Base + Commission</a></h4>
+<p>This model combines the predictability of traditional subscriptions with the growth potential of result-oriented pricing, providing you with a perfect balance between guaranteed survival and shared success.</p>
+<p><strong>Platform Fee: Your Moat</strong></p>
+<ul>
+<li><strong>Function</strong>: This fixed monthly or annual fee is your “lifeline.” It should be enough to cover your basic operating costs, including servers, fixed expenses for third-party APIs (like maps, data services), and a portion of predictable AI model usage costs.</li>
+<li><strong>Positioning</strong>: This fee is not for profit, but to filter out non-serious users and ensure your business can continue running in the worst-case scenario. It can be positioned as an “access fee” or “base service fee.”</li>
+<li><strong>Example</strong>: $39/month, including 100 basic operations.</li>
+</ul>
+<p><strong>Value-based Usage Fee: Your Growth Engine</strong></p>
+<ul>
+<li><strong>Function</strong>: This is your main source of profit. It directly links your revenue to the quantifiable value you create for customers. The key here is to precisely define the “Value Unit.”</li>
+</ul>
+<p>An excellent value unit should have the following characteristics:</p>
+<ul>
+<li><strong>Customer-Centric</strong>: It must be a business outcome the customer can intuitively understand and approve, not a technical metric. Customers don’t care how many API calls you made; they care how many potential customers you generated for them.</li>
+<li><strong>Measurable</strong>: This unit must be clear, unambiguous, and trackable.</li>
+<li><strong>Value-Correlated</strong>: The fee you charge should be proportional to the value you provide.</li>
+</ul>
+<p>Here are some examples of value units:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Business Area</th><th style="text-align: left">Bad Pricing Unit</th><th style="text-align: left">Excellent Value Unit</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>Content Marketing</strong></td><td style="text-align: left">Per GB storage / Per hour compute</td><td style="text-align: left">Per generated blog post / Per designed image / Per written tweet</td></tr>
+<tr><td style="text-align: left"><strong>Sales Automation</strong></td><td style="text-align: left">Per user seat / API call count</td><td style="text-align: left">Per qualified sales lead (MQL) / Per successfully sent personalized email</td></tr>
+<tr><td style="text-align: left"><strong>Customer Support</strong></td><td style="text-align: left">Per agent seat</td><td style="text-align: left">Per ticket resolved independently by AI / Per successful user satisfaction survey</td></tr>
+<tr><td style="text-align: left"><strong>Data Analytics</strong></td><td style="text-align: left">Per GB data processed / Per hour query</td><td style="text-align: left">Per generated customized report / Per actionable insight found</td></tr>
+<tr><td style="text-align: left"><strong>Recruiting</strong></td><td style="text-align: left">Per HR account</td><td style="text-align: left">Per automatically screened resume / Per arranged interview</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Linkage with Evals: How to Define “Success”</strong>
+How to define “successfully generated,” “qualified lead,” or “successfully resolved”? This is exactly where the Evals system discussed in Chapter 4 comes into play. You can establish a reliable set of evaluation criteria to automatically judge whether a “Value Unit” has been successfully delivered.</p>
+<p>For example, a “successfully generated blog post” can be defined as:</p>
+<ul>
+<li>Passed AI plagiarism detection.</li>
+<li>Met preset keyword density and SEO requirements.</li>
+<li>Readability score (e.g., Flesch-Kincaid score) above 70.</li>
+<li>Content highly consistent with user input summary (evaluatable by another AI model).</li>
+</ul>
+<p>Only when all these conditions are met does the system count it as a billable “Value Unit.” This not only provides transparency and trust for your customers but also provides a solid data foundation for your own business operations.</p>
+<h4 id="2-towards-pure-value-sharing-model-ultimate-partnership"><a class="header" href="#2-towards-pure-value-sharing-model-ultimate-partnership">2. Towards Pure Value-Sharing Model: Ultimate Partnership</a></h4>
+<p>As your AI system matures and you build deep trust with clients, you can explore higher-level pricing models—sharing results directly with clients. This represents a shift from vendor to true strategic partner.</p>
+<ul>
+<li><strong>Revenue Sharing</strong>: If your AI can directly drive sales, for example, by generating high-conversion ad copy or optimizing e-commerce recommendation algorithms, you can propose charging 5% of the additional revenue brought by you.</li>
+<li><strong>Cost Saving Sharing</strong>: If your AI focuses on automation and efficiency improvement, you can propose sharing the costs saved for the client. For example, if your AI customer service system helps a client reduce human agent seats by 50%, you can charge 20% of the saved labor cost as a service fee. This model requires high transparency and trust with the client, usually involving sharing sensitive financial data.</li>
+<li><strong>Subscription + Upside</strong>: This is a more robust value-sharing model, combining base subscription fees and profit sharing. For example, the client pays a fixed monthly fee to keep the system running, and simultaneously, when the revenue brought by AI exceeds a certain preset baseline, you get a share of the excess profit.</li>
+</ul>
+<p>Which pricing model to choose depends on your product maturity, client relationship, and risk tolerance. But the core idea is consistent: bind your revenue tightly and quantifiably to the value you create for customers.</p>
+<h3 id="conclusion-pricing-is-strategy"><a class="header" href="#conclusion-pricing-is-strategy">Conclusion: Pricing is Strategy</a></h3>
+<p>In the AI-native era, pricing strategy has leaped from the tail end of business operations to the core of product design. It is no longer a question you think about after finishing the product, but a strategic pivot you should deliberate on before writing the first line of code.</p>
+<p>From “charging by seat” to “charging by result,” this is not just an iteration of the business model, but a leap in thinking from “selling tools” to “providing value.” As the architect of a one-person enterprise, your core task is to build a system capable of autonomously creating value. And your pricing strategy determines whether you can fairly and sustainably transform the huge value created by this system into your own commercial success. Only when you start thinking and charging like delivering a service can you truly harness the powerful force of AI, transforming from a lone developer into a business architect in control of the big picture.</p>
+<hr>
+<p>Okay, let’s pause here and have a coffee. In the past five chapters, we have accomplished something crazy and exciting together: we captured and dissected a new species from the future—the AI-Native Enterprise.</p>
+<p>Our dissection journey began with a disturbing discovery: the rules of the business world have changed. In the past, we competed on who had more time and more hands; now, the scarcest resource has become the founder’s own pitiful attention. This declared the bankruptcy of “human wave tactics” and pushed you—the founder—into a brand new role: you are no longer the rower, but the architect designing the spaceship.</p>
+<p>To enable this architect to launch the spaceship single-handedly, we found a brand new lever for him akin to “magic”—AI. It overturned traditional cost logic, making “labor” as accessible as water and electricity. The era of “payroll” ended, and the era of “Token bills” began.</p>
+<p>With the engine, we started creating the crew for the spaceship—those tireless “Silicon-based Employees.” We found that these new species have their own “physiological characteristics”: they think based on probability, need a unique “memory system” to learn, rely on “heartbeats” to drive themselves, and even can self-evolve through a built-in “PDCA cycle.” Then, we formulated a management manual for this unique crew: using the strictest “Digital Taylorism” to regulate their behavior, using “Constitution” and “Guardrails” to define boundaries, and using flexible “Formations” (Collaboration Topology) to make them fight in synergy.</p>
+<p>Next, we established the interstellar navigation strategy for this spaceship with a crew. We no longer pin all hope on flying to a distant, uncertain planet (all-in entrepreneurship), but choose to build an “Application Matrix” composed of countless probes, advancing to hundreds of galaxies simultaneously, exploring every corner of the universe at the lowest cost, and then focusing all resources on the probe that truly discovered the “New World.”</p>
+<p>Finally, we solved the most critical business problem: how to refuel this spaceship? We abandoned the old map of “selling software by headcount” because it would self-punish amidst the efficiency gains brought by AI. We drew a brand new nautical chart—“Service-as-a-Software” (SaaS 2.0), aiming to deliver quantifiable business outcomes rather than selling tools. We designed a “Base + Commission” hybrid pricing engine to ensure the spaceship has continuous power when exploring new routes, transforming us from “selling shovels” to “selling well water,” capturing our own value by sharing the value created for customers.</p>
+<p>Here, the “blueprint” of this spaceship is finished. We know its engine principle, crew characteristics, management laws, navigation strategy, and refueling method. But a blueprint is ultimately on paper. A soul-searching question lies before us: How exactly do we build this mythical spaceship? Where do we cut the first steel plate? How do we connect the first wire?</p>
+<p>Don’t worry, starting from the next chapter, we will transform from engineers drawing blueprints to mechanics turning screws. We will dive from the “Tao” in the clouds into the “Technique” smelling of machine oil. Get ready, we are about to get our hands dirty.</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>“The Seat Paradox” is a well-known challenge in the SaaS industry, where client efficiency gains may lead to fewer paying users, thus reducing revenue. OpenView Venture Partners’ article “Usage-Based Pricing: A Framework for Adopting and Implementing It in Your SaaS Business” discusses this in depth. Article link: <a href="https://openviewpartners.com/blog/usage-based-pricing-framework/">https://openviewpartners.com/blog/usage-based-pricing-framework/</a> <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>“Service-as-a-Software” is a model that delivers AI capabilities directly as quantifiable business outcomes. Thoughtful.ai’s article “The biggest secret in AI” deeply analyzes this concept and explains how it changes the value proposition of traditional SaaS. Article link: <a href="https://www.thoughtful.ai/blog/the-biggest-secret-in-ai">https://www.thoughtful.ai/blog/the-biggest-secret-in-ai</a> <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>The profit margin of AI-native applications stems from the huge price difference between their extremely low marginal costs (mainly Token fees) and the expensive human services they replace. To understand the cost structure of AI, refer to Andreessen Horowitz (a16z)’s article “Navigating the High Cost of AI Compute”. Article link: <a href="https://a16z.com/navigating-the-high-cost-of-ai-compute/">https://a16z.com/navigating-the-high-cost-of-ai-compute/</a> <a href="#fr-3-1">↩</a></p>
+</li>
+<li id="footnote-4">
+<p>The pure pay-for-performance model is high risk for early-stage companies, so hybrid pricing is a more pragmatic choice. For the evolution and risks of SaaS pricing strategies, refer to Andreessen Horowitz (a16z)’s article “Pricing Your SaaS Product”. Article link: <a href="https://a16z.com/2023/10/24/pricing-your-saas-product/">https://a16z.com/2023/10/24/pricing-your-saas-product/</a> <a href="#fr-4-1">↩</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter5/5.2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter5/5.2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
