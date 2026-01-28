@@ -20,4 +20,4 @@ This book is released under the [CC-BY-NC-SA License](https://creativecommons.or
 - You may not use this work for commercial purposes.
 - You may distribute derivative works only under a license identical to the license that governs this work.
 
-Online Reading: <https://opu.ft07.com>
+Online Reading: <https://opu.ft07.com> | [ePub Download](https://opu.ft07.com/en/epub/The%20One-Person%20Unicorn.epub)

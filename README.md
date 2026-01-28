@@ -24,4 +24,4 @@ PS：本书使用了 Google Gemini 进行排版、润色和翻译。
 - 不得为商业目的而使用本作品。
 - 仅在遵守与本作品相同的许可条款下，您才能散布由本作品产生的派生作品。
 
-在线阅读：<https://opu.ft07.com>
+在线阅读：<https://opu.ft07.com> | [ePub下载](https://opu.ft07.com/zh/epub/%E4%B8%80%E4%BA%BA%E7%8B%AC%E8%A7%92%E5%85%BD.epub)
