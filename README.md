@@ -2,7 +2,22 @@
 https://github.com/user-attachments/assets/c73e1e03-cf09-4e8b-8474-b2ab7a778bb4
 
 
-![](en/src/image/cover.jpg)
+![](cn/src/image/cover.jpg)
+
+![](cn/src/image/sob2.jpeg)
+![](cn/src/image/sob3.jpeg)
+![](cn/src/image/sob4.jpeg)
+![](cn/src/image/sob5.jpeg)
+![](cn/src/image/sob6.jpeg)
+![](cn/src/image/sob7.jpeg)
+![](cn/src/image/sob8.jpeg)
+![](cn/src/image/sob9.jpeg)
+![](cn/src/image/sob10.jpeg)
+![](cn/src/image/sob11.jpeg)
+![](cn/src/image/sob12.jpeg)
+![](cn/src/image/sob13.jpeg)
+![](cn/src/image/sob14.jpeg)
+![](cn/src/image/sob15.jpeg)
 
 [English Version](README_EN.md)
 
