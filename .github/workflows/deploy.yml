@@ -60,10 +60,12 @@ jobs:
           fi
           rm -rf ../public/en_build
           
-      - name: Copy Index
+      - name: Copy Static Files
         run: |
           # Copy index page to root
           cp index.html public/index.html
+          # Copy CNAME
+          cp CNAME public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
